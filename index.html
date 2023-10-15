@@ -9,13 +9,14 @@
 <body>
     <header>
         <div class="logo">
-            <h1>Frog Studio</h1>
+            <img src="IMGs/Frog Studio Website Logo.svg">
+            <p> Studio</p>
         </div>
-        <div class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+        <button type="button" aria-label="toggle curtain navigation" class="menu-toggle">
+            <span class="line l1"></span>
+            <span class="line l2"></span>
+            <span class="line l3"></span>
+        </button>
     </header>
     
     <nav class="mobile-menu">
@@ -28,20 +29,28 @@
     </nav>
     
     <main>
-        <section id="section1" class="full-width-images">
+        <section id="last-projetct" class="full-width-images">
             <!-- Vos images en plein écran -->
         </section>
         
-        <section id="section2" class="grid-images">
+        <section id="latest-projects" class="grid-images">
             <!-- Vos 8 images en grille 2x4 -->
         </section>
         
-        <section id="section3" class="carousel">
-            <!-- Carrousel d'images -->
-            
+        <section id="carousel" class="carousel">
+            <div id="image-track" data-mouse-down-at="0">
+                <img class="image" src="Photos/Portfolio-Aerien-Small-06.jpg" draggable="false"/>
+                <img class="image" src="Photos/Portfolio-Aerien-Small-07.jpg" draggable="false"/>
+                <img class="image" src="Photos/Portfolio-Aerien-Small-10.jpg" draggable="false"/>
+                <img class="image" src="Photos/Portfolio-Aerien-Small-11.jpg" draggable="false"/>
+                <img class="image" src="Photos/Portfolio-Aerien-Small-13.jpg" draggable="false"/>
+                <img class="image" src="Photos/Portfolio-Aerien-Small-14.jpg" draggable="false"/>
+                <img class="image" src="Photos/Portfolio-Aerien-Small-19.jpg" draggable="false"/>
+                <img class="image" src="Photos/Portfolio-Aerien-Small-21.jpg" draggable="false"/>
+            </div>
         </section>
         
-        <section id="section4" class="about">
+        <section id="about" class="about">
             <h2>Mon Histoire</h2>
             <p>Ici, vous pouvez écrire votre histoire ou présenter vos projets en détail.</p>
         </section>
@@ -54,7 +63,7 @@
             <li><a href="#projet3">Projet 3</a></li>
         </ul>
     </footer>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
