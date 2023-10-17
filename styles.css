@@ -3,6 +3,7 @@ body {
     font-family: Poppins, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 :root {
@@ -63,10 +64,10 @@ header {
     color: var(--main-accent-color);
     content: "FROG";
 }
+/* Fin Style Généraux */
 
-/*Menu Burger*/
-/*Boutton du menu burger*/
-
+/* Menu Burger */
+/* Boutton du menu burger */
 .menu-toggle {
     position: relative;
     z-index: 10;
@@ -119,6 +120,7 @@ header {
     background-color: #fff;
     margin: 3px 0;
 }
+/* Fin boutton menu burger */
 
 /* Nav du menu burger */
 .mobile-menu {
@@ -149,32 +151,76 @@ header {
     margin: 5rem 0;
     text-decoration: none;
 }
+/* Fin du menu burger */
+/* FIN DU HEADER */
 
-/*Fin du menu burger*/
-/*FIN DU HEADER*/
-
-/*MAIN*/
+/* MAIN */
 /* Sections */
-
 section {
     padding: 20px;
 }
 
 /* Frog Studio presentation */
-.full-width-images {
-    height: 100vh;
-    background: green;
+.landing {
+    padding: 0;
+    overflow: hidden;
 }
 
-/* Frog Studio presentation */
+.landing img {
+    flex-shrink: 0;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
 
+.landing h1 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 250px;
+    color: white;
+
+}
+/* Fin Frog Studio presentation */
+
+/* Grids for projects */
 .grid-images {
     display: grid;
-    height: 200vh;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    background: blue;
+    grid-template-columns: 50vw 50vw;
+    gap: 0.25rem;
+    background: var(--main-accent-color);
+    padding: 0;
 }
+
+.grid-images a {
+    height: 25vw;
+    width: 25vw;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-images img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.graphic-projects {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25vw 25vw 25vw 25vw;
+}
+
+.photo-projects {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25vw 25vw 25vw 25vw;
+}
+/* fin de grids for projects */
 
 /* Carousel */
 .carousel {
