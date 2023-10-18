@@ -10,7 +10,7 @@ function togglenav(){
     mobileMenu.classList.toggle("active")
 }
 
-// Script pour carousel
+/* Script pour carrousel */
 
 const track = document.getElementById("image-track");
 
@@ -57,3 +57,4 @@ window.ontouchend = e => handleOnUp(e.touches[0]);
 window.onmousemove = e => handleOnMove(e);
 
 window.ontouchmove = e => handleOnMove(e.touches[0]);
+/* Fin du carrousel */

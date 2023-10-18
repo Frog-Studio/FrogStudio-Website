@@ -196,17 +196,39 @@ section {
     width: 25vw;
     overflow: hidden;
     position: relative;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .grid-images img {
+    height: 25vw;
+    transition: height 1s;
+    aspect-ratio: 1/1;
+}
+
+.grid-images a:hover img {
+    transition: height 0.5s;
+    height: 27vw;
+}
+
+.grid-images h2 {
     position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    width: 100%;
+    bottom: -21%;
+    transition: bottom 1s;
+    text-align: center;
+    text-shadow: black 0 0 10px;
+    color: var(--main-accent-color);
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    padding: 20px 0;
+    border-top: 1px var(--main-accent-color);
+}
+
+.grid-images a:hover h2 {
+    bottom: -4.25%;
+    transition: bottom 0.5s cubic-bezier(.31,.05,.15,.98);
 }
 
 .graphic-projects {
@@ -222,31 +244,33 @@ section {
 }
 /* fin de grids for projects */
 
-/* Carousel */
-.carousel {
+/* Carrousel */
+.carrousel {
     height: 100vh;
     width: 100wh;
     background-color: black;
     margin: 0;
     overflow: hidden;   
+    position: relative;
+}
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-0%, -50%);
+    user-select: none;
 }
 
 #image-track > .image {
     width: 40vmin;
     height: 56vmin;
     object-fit: cover;
-    object-position: center;
+    object-position: 100% center;
 }
-
-#image-track {
-    display: flex;
-    gap: 4vmin;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-0%, -50%);
-}
-/*Fin du carousel*/
+/*Fin du carrousel*/
 
 /*about*/
 .about {
