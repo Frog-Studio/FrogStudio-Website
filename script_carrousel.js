@@ -1,17 +1,4 @@
-// JavaScript pour le menu mobile
-
-const menuToggle = document.querySelector('.menu-toggle')
-const mobileMenu = document.querySelector('.mobile-menu')
-
-menuToggle.addEventListener("click", togglenav)
-
-function togglenav(){
-    menuToggle.classList.toggle("active")
-    mobileMenu.classList.toggle("active")
-}
-
 /* Script pour carrousel */
-
 const track = document.getElementById("image-track");
 
 const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
@@ -35,12 +22,12 @@ const handleOnMove = e => {
   
   track.animate({
     transform: `translate(${nextPercentage}%, -50%)`
-  }, { duration: 1200, fill: "forwards" });
+  }, { duration: 2000, fill: "forwards" });
   
   for(const image of track.getElementsByClassName("image")) {
     image.animate({
       objectPosition: `${100 + nextPercentage}% center`
-    }, { duration: 1200, fill: "forwards" });
+    }, { duration: 2000, fill: "forwards" });
   }
 }
 

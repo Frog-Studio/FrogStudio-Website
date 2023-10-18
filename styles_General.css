@@ -152,173 +152,9 @@ header {
     text-align: center;
 }
 /* Fin du menu burger */
-/* FIN DU HEADER */
-
-/* MAIN */
-/* Sections */
-section {
-    padding: 20px;
-}
-
-/* Frog Studio presentation */
-.landing {
-    padding: 0;
-    overflow: hidden;
-    position: relative;
-}
-
-.landing img {
-    flex-shrink: 0;
-    width: 100%;
-    aspect-ratio: 16/9;
-}
-
-.landing h1 {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-size: 250px;
-    color: var(--main-accent-color);
-    margin: 0;
-}
-
-.landing h1::before {
-    color: white;
-    font-size: 7rem;
-    font-weight: 100;
-    content: "Bienvenue chez";
-}
-
-.landing h1::after {
-    color: white;
-    content: "Studio";
-}
-/* Fin Frog Studio presentation */
-
-/* Grids for projects */
-.grid-images {
-    display: grid;
-    grid-template-columns: 50vw 50vw;
-    gap: 0.25rem;
-    background: var(--main-accent-color);
-    padding: 0;
-}
-
-.grid-images a {
-    height: 25vw;
-    width: 25vw;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.grid-images img {
-    height: 25vw;
-    transition: height 1s;
-    aspect-ratio: 1/1;
-}
-
-.grid-images a:hover img {
-    transition: height 0.5s;
-    height: 27vw;
-}
-
-.grid-images h2 {
-    position: absolute;
-    width: 100%;
-    bottom: -21%;
-    transition: bottom 1s;
-    text-align: center;
-    text-shadow: black 0 0 10px;
-    color: var(--main-accent-color);
-    background-color: rgba(0, 0, 0, 0.4);
-    background-size: contain;
-    padding: 20px 0;
-    border-top: 1px var(--main-accent-color);
-}
-
-.grid-images a:hover h2 {
-    bottom: -4.25%;
-    transition: bottom 0.5s cubic-bezier(.31,.05,.15,.98);
-}
-
-.graphic-projects {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 25vw 25vw 25vw 25vw;
-}
-
-.photo-projects {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 25vw 25vw 25vw 25vw;
-}
-/* fin de grids for projects */
-
-/* Carrousel */
-.carrousel {
-    height: 100vh;
-    width: 100wh;
-    background-color: black;
-    margin: 0;
-    overflow: hidden;   
-    position: relative;
-}
-
-#image-track {
-    display: flex;
-    gap: 4vmin;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-0%, -50%);
-    user-select: none;
-}
-
-#image-track > .image {
-    width: 40vmin;
-    height: 56vmin;
-    object-fit: cover;
-    object-position: 100% center;
-}
-/*Fin du carrousel*/
-
-/*about*/
-.about {
-    height: 25vh;
-    background-color: red;
-    text-align: center;
-}
-
-/*fin du about*/
-/*FIN DU MAIN*/
-
-/* FOOTER */
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer li {
-    display: inline;
-    margin: 0 10px;
-}
-
-/*FIN DU FOOTER*/
 
 /* Media Queries pour la réactivité */
 /* Styles pour les écrans de largeur <= 768px */
-
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
@@ -349,3 +185,23 @@ footer li {
         padding: 10px;
     }
 }
+/* FIN DU HEADER */
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    display: inline;
+    margin: 0 10px;
+}
+/*FIN DU FOOTER*/
