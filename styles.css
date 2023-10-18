@@ -164,6 +164,7 @@ section {
 .landing {
     padding: 0;
     overflow: hidden;
+    position: relative;
 }
 
 .landing img {
@@ -177,8 +178,20 @@ section {
     bottom: 10px;
     left: 10px;
     font-size: 250px;
-    color: white;
+    color: var(--main-accent-color);
+    margin: 0;
+}
 
+.landing h1::before {
+    color: white;
+    font-size: 7rem;
+    font-weight: 100;
+    content: "Bienvenue chez";
+}
+
+.landing h1::after {
+    color: white;
+    content: "Studio";
 }
 /* Fin Frog Studio presentation */
 
