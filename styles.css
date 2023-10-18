@@ -13,7 +13,6 @@ body {
 /* Scroll bar*/
 ::-webkit-scrollbar {
     width: 0.25rem;
-    border-left: 1px;
     border-color: black;
 }
 
@@ -26,7 +25,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #131313;
+    background: var(--main-accent-color);
 }
 /* Fin scroll bar */
 
@@ -125,8 +124,8 @@ header {
 /* Nav du menu burger */
 .mobile-menu {
     position: fixed;
-    z-index: 9;
-    width: 25vw;
+    z-index: 100;
+    width: 15vw;
     height: 100vh;
     right: 0;
     display: flex;
@@ -150,6 +149,7 @@ header {
     display: block;
     margin: 5rem 0;
     text-decoration: none;
+    text-align: center;
 }
 /* Fin du menu burger */
 /* FIN DU HEADER */
