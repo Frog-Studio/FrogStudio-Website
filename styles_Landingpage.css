@@ -2,6 +2,42 @@
 /* Sections */
 
 /* Frog Studio presentation */
+.landing {
+    width: 100vw;
+    aspect-ratio: 16/9;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+@keyframes ZoomOut {
+    0% {
+        width: 175vw;
+        opacity: 0%;
+    }
+    100% {
+        width: 105vw;
+        opacity: 100%;
+    }
+}
+
+.landinginmagecontainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing img {
+    position: absolute;
+    animation: ZoomOut 3s cubic-bezier(.45,.36,.17,.97) 0s;
+    width: 105vw;
+}
+
 @keyframes SlidingLeftToRight {
     0% {
         transform: translateX(-120%);
@@ -14,46 +50,21 @@
     }
 }
 
-@keyframes ZoomOut {
-    0% {
-        width: 175%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-.landing {
-    padding: 0;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.landing img {
-    position: static;
-    animation: 3s cubic-bezier(.45,.36,.17,.97) 0s ZoomOut;
-    width: 100%;
-    aspect-ratio: 16/9;
-}
-
 .landing h1 {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-size: 10rem;
-    line-height: 12rem;
+    bottom: 5vw;
+    left: 5vw;
+    font-size: 10vw;
+    line-height: 9vw;
     color: var(--main-accent-color);
     margin: 0;
-    animation: 3s cubic-bezier(.55,.13,.18,.93) 0s SlidingLeftToRight;
+    animation: SlidingLeftToRight 3s cubic-bezier(.45,.36,.17,.97) 0s;
 }
 
 .landing h1::before {
     color: white;
-    font-size: 5rem;
-    line-height: 2rem;
+    font-size: 3vw;
+    line-height: 1vw;
     font-weight: 100;
     content: "Bienvenue chez";
 }
@@ -129,7 +140,7 @@
 /* Carrousel */
 .carrousel {
     height: 100vh;
-    width: 100wh;
+    width: 100vw;
     background-color: black;
     margin: 0;
     overflow: hidden;   
