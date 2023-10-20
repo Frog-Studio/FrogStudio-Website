@@ -4,7 +4,7 @@
 /* Frog Studio presentation */
 .landing {
     width: 100vw;
-    aspect-ratio: 16/9;
+    aspect-ratio: 17/9;
     padding: 0;
     overflow: hidden;
     position: relative;
@@ -108,20 +108,22 @@
 .grid-images h2 {
     position: absolute;
     width: 100%;
-    bottom: -21%;
-    transition: bottom 1s;
+    bottom: -100%;
+    transition: bottom 1s cubic-bezier(.45,.36,.17,.97);
     text-align: center;
     text-shadow: black 0 0 10px;
+    font-size: 1.1vw;
     color: var(--main-accent-color);
     background-color: rgba(0, 0, 0, 0.4);
     background-size: contain;
     padding: 20px 0;
     border-top: 1px var(--main-accent-color);
+    margin: 0;
 }
 
 .grid-images a:hover h2 {
-    bottom: -4.25%;
-    transition: bottom 0.5s cubic-bezier(.31,.05,.15,.98);
+    bottom: 0;
+    transition: bottom 0.5s cubic-bezier(.45,.36,.17,.97);
 }
 
 .graphic-projects {
@@ -164,12 +166,4 @@
     object-position: 100% center;
 }
 /*Fin du carrousel*/
-
-/*about*/
-.about {
-    height: 25vh;
-    background-color: red;
-    text-align: center;
-}
-/*fin du about*/
 /*FIN DU MAIN*/
