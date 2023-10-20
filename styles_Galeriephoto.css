@@ -1,0 +1,24 @@
+/* Landing photo */
+.landing {
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+.landing img{
+    width: 100%;
+    transition: width 2s cubic-bezier(.29,.06,.37,.95);
+    aspect-ratio: 16/9;
+}
+
+.landing img:hover {
+    width: 120%;
+    transition: width 1s cubic-bezier(.29,.06,.37,.95);
+}
+
+.landing h1 {
+    position: sticky;
+    display: flex;
+    bottom: 5vw;
+    left: 5vw;
+}
