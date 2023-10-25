@@ -1,14 +1,12 @@
 // Script pour aller chercher toutes les images du dossier photo
-var folder = "Photos/";
+import Vue from 'vue';
+import ImageList from '../Components/ImageList.vue';
 
-$.ajax({
-    url : folder,
-    success: function (data) {
-        $(data).find("a").attr("href", function (i, val) {
-            if( val.match(/\.(jpeg|png|gif)$/) ) { 
-                $("body").append( "<img class="image-galerie" src='"+ folder + val +"' draggable="false">" );
-            } 
-        });
-    }
+const app = Vue.createApp({
+  components: {
+    ImageList,
+  },
 });
+
+app.mount('#app');
 // Fin du script photo seeker

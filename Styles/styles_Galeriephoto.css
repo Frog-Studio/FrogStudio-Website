@@ -63,3 +63,50 @@
     content: "Galerie";
 }
 /* Fin de Landing Photo */
+
+/* début de toutes les photos */
+
+.all-images {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-column: 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80vw;
+    border-left: 1px solid var(--main-accent-color);
+    border-right: 1px solid var(--main-accent-color);
+    padding: 0 5vw;
+}
+
+.all-images img {
+    width: 25vw;
+    height: 100%;
+}
+
+.all-images img:hover {
+    height: 115%;
+}
+
+.images-pa {
+    grid-row: span 1;
+    grid-column: span 2;
+    overflow: hidden;
+}
+
+.images-po {
+    grid-row: span 2;
+    grid-column: span 1;
+    overflow: hidden;
+}
+
+.images-ca {
+    grid-row: span 1;
+    grid-column: span 1;
+    overflow: hidden;
+}
+/* fin des photos */
