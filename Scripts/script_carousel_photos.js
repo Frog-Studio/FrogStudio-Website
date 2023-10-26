@@ -18,7 +18,7 @@ function changeCarouselImages(imagePositions) {
   for (const index in imagePositions) {
     imageElements[index].src = imagePositions[index];
   }
-}
+};
 
 // Call the function to change the images in the carousel with the object containing the image URLs and their positions
 changeCarouselImages(imagePositions);
@@ -44,8 +44,21 @@ carouselNext.addEventListener("click", () => {
   }
 });
 
-// A ECRIRE LE GET PATH DE L'IMAGE
+/* A ECRIRE LE GET PATH DE L'IMAGE
 function getImagePath(Place) {
     if (Place)
         
-}
+}*/
+
+// Fermeture du carousel
+const CloseBtn = document.getElementById('close-btn')
+
+CloseBtn.addEventListener('click', () => {
+  console.log('oui');
+  var carousel = document.getElementById('carousel');
+  if (carousel.style.display === 'none') {
+    carousel.style.display = 'sticky';
+  } else {
+    carousel.style.display = 'none';
+  }
+});

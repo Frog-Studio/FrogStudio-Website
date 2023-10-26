@@ -1,7 +1,7 @@
 /* Landing photo */
 .landing {
-    width: 100vw;
-    aspect-ratio: 17/9;
+    width: 100dvw;
+    height: 100dvh; 
     padding: 0;
     overflow: hidden;
     position: relative;
@@ -69,72 +69,36 @@
 .fullwidth-images-section {
     position: sticky;
     z-index: 2;
-    top: 75px;
+    top: 0;
     width: 100dvw;
-    height: 94.5dvh;
+    height: 100dvh;
     overflow: hidden;
-
-    /*display: none;*/
-}
-
-.fullwidth-images-section img {
-    width: 80%;
-    height: 80%;
-    text-align: center;
-    object-fit: cover;
-    display: block;
 }
 
 .carousel-view {
     width: 100dvw;
-    height: 94.5dvh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 80px 40px black;
+    object-fit: cover;
 }
 
-.carousel-prev,
-.carousel-next {
-    position: absolute;
-    top: 50%;
-    width: 200px;
-    height: 100px;
-    opacity: 0.25;
-    transition: opacity 0.5s;
-}
-
-.carousel-prev:hover,
-.carousel-next:hover {
-    opacity: 1;
-}
-
-.carousel-prev {
-    left: 0;
-}
-
-.carousel-next {
-    right: 0;
-}
-
-.carousel-prev img,
-.carousel-next img {
-    width: 66.6666666667%;s
-    height: 100%;
-}
-
-.carousel-close {
-    top: 0;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+.carousel-view img {
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    object-fit: contain;
+    display: block;
 }
 
 /* boutons prev et next */
 .btn-next,
 .btn-prev {
-    position: absolute;
+    position: fixed;
+    z-index: 1;
     top: 50%;
     height: 5dvw;
     width: 5dvw;
@@ -142,24 +106,24 @@
     border: solid var(--main-accent-color);
     padding: 0;
     color: white;
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.75);
+    transform: translateX(0);
+    transition: transform 0.5s cubic-bezier(.33,.07,.19,.94);
 }
 
 .btn-prev {
     left: 0;
     border-radius: 0 50% 50% 0;
-    transform: translateX(0);
-    transition: transform 0.5s cubic-bezier(.33,.07,.19,.94);
     border-width: 1px 1px 1px 0;
 }
 
 .btn-next {
     right: 0;
     border-radius: 50% 0 0 50%;
-    transform: translateX(0);
-    transition: transform 0.5s cubic-bezier(.33,.07,.19,.94);
     border-width: 1px 0 1px 1px;
 }
 
+/* animation des boutons */
 .btn-next:hover {
     transform: translateX(20%);
     transition: transform 0.5s cubic-bezier(.33,.07,.19,.94);
@@ -169,53 +133,112 @@
     transform: translateX(-20%);
     transition: transform 0.5s cubic-bezier(.33,.07,.19,.94);
 }
+/* Fin animation des boutons */
+
 /* Flèches des boutons prev & next */
 .arrow-right,
 .arrow-left{
-  display: block;
-  margin: 30px auto;
-  width: 25px;
-  height: 25px;
-  border-top: 2px solid white;
-  border-left: 2px solid white;
+    position: relative;
+    top: 0;
+    display: block;
+    width: 2dvw;
+    height: 2dvw;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
 }
 .arrow-right{
- transform: rotate(135deg);
+    transform: rotate(135deg);
+    left: 20%;
 }
 
 .arrow-left{
- transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    left: 30%;
 }
 /* FIN Flèches des boutons prev & next */
-/* FIN boutons prev et next */
 
-/* croix du menu *//*
-.close {
+/* Images preview */
+.carousel-prev,
+.carousel-next {
     position: absolute;
-    right: 32px;
-    top: 32px;
-    width: 32px;
-    height: 32px;
-    opacity: 0.3;
-  }
+    top: 50%;
+    height: 10dvw;
+    width: fit-content;
+    opacity: 0.2;
+    box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.75);
+    pointer-events: none;
+    transition: transform 1s cubic-bezier(.33,.07,.19,.94);
+}
+
+.carousel-prev img,
+.carousel-next img {
+    height: 10dvw;
+    width: auto;
+}
+
+.carousel-prev {
+    transform: translateX(-25dvw) translateY(-25%);
+}
+
+.carousel-next {
+    transform: translateX(125dvw) translateY(-25%);
+}
+/* Fin images preview */
+
+/* animations des photos de préview */
+.btn-next:hover + .carousel-next,
+.btn-prev:hover + .carousel-prev {
+    opacity: 1;
+}
+
+.btn-next:hover + .carousel-next {
+    transform: translateX(90dvw) translateX(-100%) translateY(-25%);
+    transition: transform 0.75  s cubic-bezier(0,.22,.5,1);
+}
+
+.btn-prev:hover + .carousel-prev {
+    transform: translateX(10dvw) translateY(-25%);
+    transition: transform 0.75s cubic-bezier(0,.22,.5,1);
+}
+/* Fin animations des photos de préview */
+
+/* Fermeture du Carousel */
+.carousel-close {
+    position: absolute;
+    right: 5dvw;
+    top: 5.3dvw;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+/* croix du menu */
+.close {
+    width: 50px;
+    height: 50px;
+        opacity: 0.5;
+    }
   .close:hover {
     opacity: 1;
   }
   .close:before, .close:after {
     position: absolute;
-    left: 15px;
     content: ' ';
-    height: 33px;
+    height: 70px;
     width: 2px;
-    background-color: #333;
+    border-radius: 2px;
+    background-color: var(--main-accent-color);
   }
   .close:before {
     transform: rotate(45deg);
   }
   .close:after {
     transform: rotate(-45deg);
-  }*/
+  }
 /* fin de la croix du menu */
+/* FIN boutons prev et next */
 
 /*toutes toutes les photos*/
 .all-images {
@@ -231,7 +254,6 @@
     border-left: 1px solid var(--main-accent-color);
     border-right: 1px solid var(--main-accent-color);
     padding: 0 2.5vw;
-    /*display: none;*/
 }
 
 .images-containers {
@@ -249,21 +271,12 @@
     width: 100%;
     height: 100%;
     scale: 100%;
-    transition: scale 2s cubic-bezier(.45,.36,.17,.97);
+    transition: scale 1s ease;
 }
 
 .all-images img:hover {
     scale: 115%;
-    transition: scale 1s cubic-bezier(.45,.36,.17,.97);
-}
-
-.images-pa {
-}
-
-.images-po {
-}
-
-.images-ca {
+    transition: scale 2s ease;
 }
 /* fin des photos */
 /* fin de full width image section */

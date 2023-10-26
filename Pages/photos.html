@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/styles_General.css">
     <link rel="stylesheet" href="../Styles/styles_Galeriephoto.css">
-    <link rel="shortcut icon" href="../Icons/Frog Studio Icon.ico">
+    <link rel="shortcut icon" href="../Assets/Icons/Frog_Studio_Icon.ico">
     <title>Frog Studio</title>
 </head>
 <body>
@@ -23,7 +23,7 @@
             </button>
         </div>
     </header>
-    
+
     <nav class="mobile-menu">
         <ul>
             <li><a href="index.html">Acceuil</a></li>
@@ -40,28 +40,22 @@
             <h1><br>PHOTOS</h1>
         </section>
 
-        <section class="fullwidth-images-section">
+        <section class="fullwidth-images-section" id="carousel">
             <div class="carousel-view">
-                <img src="../Assets/Photos/Portfolio_P_PA-38.webp" id="v0" draggable="false">
+                <img src="../Assets/Photos/Portfolio_P_PA-11.webp" id="v0" draggable="false">
             </div>
-            <div class="carousel-prev">
-                <img src="../Assets/Photos/Portfolio_P_PA-12.webp" id="p1" draggable="false">
-                <img src="../Assets/Photos/Portfolio_P_PO-12.webp" id="p2" draggable="false">
-                <img src="../Assets/Photos/Portfolio_P_CA-04.webp" id="p3" draggable="false">
-            </div>
-            <div class="carousel-next">
-                <img src="../Assets/Photos/Portfolio_P_PO-14.webp" id="n1" draggable="false">
-                <img src="../Assets/Photos/Portfolio_P_PA-28.webp" id="n2" draggable="false">
-                <img src="../Assets/Photos/Portfolio_P_PA-06.webp" id="n3" draggable="false">
-            </div>
-            
-            <!--
-            <div class="carousel-close">
-                <a href="#" class="close">
-            </div>
-            -->
-            <button class="btn-next" onclick="changeCarouselImage()"><div class="arrow-right"></div></button>
-            <button class="btn-prev" onclick="changeCarouselImage()"><div class="arrow-left"></div></button>
+            <button class="btn-next" onclick="changeCarouselImage()">
+                <div class="arrow-right"></div>
+            </button>
+            <div class="carousel-next"><img src="../Assets/Photos/Portfolio_P_PO-14.webp" id="n1" draggable="false"></div>
+            <button class="btn-prev" onclick="changeCarouselImage()">
+                <div class="arrow-left"></div>
+            </button>
+            <div class="carousel-prev"><img src="../Assets/Photos/Portfolio_P_PA-06.webp" id="p1" draggable="false"></div>
+
+            <button class="carousel-close" id="close-btn">
+                <div class="close"></div>
+            </button>
         </section>
         
         <section class="all-images">
