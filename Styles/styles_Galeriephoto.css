@@ -53,14 +53,14 @@
     left: 5vw;
     font-size: 10vw;
     line-height: 9vw;
-    color: var(--main-accent-color);
+    color: white;
     margin: 0;
     animation: SlidingLeftToRight 3s cubic-bezier(.45,.36,.17,.97) 0s;
 }
 
-.landing h1::before {
-    color: white;
-    content: "Galerie";
+.landing h1::first-line {
+    color: var(--main-accent-color);
+    text-transform: uppercase;
 }
 /* Fin de Landing Photo */
 
