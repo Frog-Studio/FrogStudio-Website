@@ -1,4 +1,4 @@
-// Get the carousel element from the DOM
+// Get the carousel element from the DOC
 const carousel = document.querySelector(".all-images");
 
 // Get all of the img elements in the carousel
@@ -10,6 +10,8 @@ const imagePositions = {};
 // Iterate over the img elements and add them to the object, along with their positions in the carousel
 imageElements.forEach((imageElement, index) => {
   imagePositions[index] = imageElement.src;
+  //console.log(index);
+  //console.log(imagePositions[index]);
 });
 
 // Create a function to change the images in the carousel
@@ -23,42 +25,42 @@ function changeCarouselImages(imagePositions) {
 // Call the function to change the images in the carousel with the object containing the image URLs and their positions
 changeCarouselImages(imagePositions);
 
+let ClickedImg = document.querySelectorAll(".images");
 
-const carouselView = document.querySelector(".carousel-view");
-const carouselPrev = document.querySelector(".carousel-prev");
-const carouselNext = document.querySelector(".carousel-next");
+var currentSlide = imagePositions;
 
-let currentSlide = 0;
-
-carouselPrev.addEventListener("click", () => {
-  if (currentSlide > 0) {
-    currentSlide--;
-    carouselView.style.transform = `translateX(-${currentSlide}00%)`;
+ClickedImg.forEach((image) => {
+  image.onclick = function () {
+    carouseldiv.style.display = 'block';
+    AllImages.style.top = '-100dvh';
+    currentSlide = [...this.parentElement.parentElement.children].indexOf(this.parentElement);
+    document.getElementById("v0").src = imagePositions[currentSlide];
+    document.getElementById("n1").src = imagePositions[currentSlide+1];
+    document.getElementById("p1").src = imagePositions[currentSlide-1];
+    //console.log(image);
+    console.log(currentSlide);
+    //console.log(imagePositions[index]);
   }
 });
 
-carouselNext.addEventListener("click", () => {
-  if (currentSlide < carouselImages.length - 1) {
-    currentSlide++;
-    carouselView.style.transform = `translateX(-${currentSlide}00%)`;
-  }
-});
+function NextImg() {
+  currentSlide++;
+  document.getElementById("v0").src = imagePositions[currentSlide];
+  document.getElementById("n1").src = imagePositions[currentSlide+1];
+  document.getElementById("p1").src = imagePositions[currentSlide-1];
+}
 
-/* A ECRIRE LE GET PATH DE L'IMAGE
-function getImagePath(Place) {
-    if (Place)
-        
-}*/
+function PrevImg() {
+  currentSlide--;
+  document.getElementById("v0").src = imagePositions[currentSlide];
+  document.getElementById("n1").src = imagePositions[currentSlide+1];
+  document.getElementById("p1").src = imagePositions[currentSlide-1];
+}
 
 // Fermeture du carousel
-const CloseBtn = document.getElementById('close-btn')
+const CloseBtn = document.getElementById('close-btn');
 
 CloseBtn.addEventListener('click', () => {
-  console.log('oui');
-  var carousel = document.getElementById('carousel');
-  if (carousel.style.display === 'none') {
-    carousel.style.display = 'sticky';
-  } else {
-    carousel.style.display = 'none';
-  }
+  carouseldiv.style.display = 'none';
+  AllImages.style.top = '0';
 });
