@@ -166,7 +166,7 @@
     height: 10dvw;
     width: fit-content;
     opacity: 0.2;
-    box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.25);
     pointer-events: none;
     transition: transform 1s cubic-bezier(.33,.07,.19,.94);
 }

@@ -34,27 +34,74 @@ ClickedImg.forEach((image) => {
     carouseldiv.style.display = 'block';
     AllImages.style.top = '-100dvh';
     currentSlide = [...this.parentElement.parentElement.children].indexOf(this.parentElement);
-    document.getElementById("v0").src = imagePositions[currentSlide];
-    document.getElementById("n1").src = imagePositions[currentSlide+1];
-    document.getElementById("p1").src = imagePositions[currentSlide-1];
+    
+    if ( currentSlide === imageElements.length - 1 ) {
+      document.getElementById("v0").src = imagePositions[currentSlide];
+      document.getElementById("n1").src = imagePositions[0];
+      document.getElementById("p1").src = imagePositions[currentSlide-1];
+    }
+    else if (currentSlide === 0) {
+      document.getElementById("v0").src = imagePositions[currentSlide];
+      document.getElementById("n1").src = imagePositions[currentSlide+1];
+      document.getElementById("p1").src = imagePositions[imageElements.length-1];
+    }
+    else {
+      document.getElementById("v0").src = imagePositions[currentSlide];
+      document.getElementById("n1").src = imagePositions[currentSlide+1];
+      document.getElementById("p1").src = imagePositions[currentSlide-1];
+    }
     //console.log(image);
-    console.log(currentSlide);
+    //console.log(currentSlide);
     //console.log(imagePositions[index]);
   }
 });
 
 function NextImg() {
   currentSlide++;
-  document.getElementById("v0").src = imagePositions[currentSlide];
-  document.getElementById("n1").src = imagePositions[currentSlide+1];
-  document.getElementById("p1").src = imagePositions[currentSlide-1];
+  
+  if (currentSlide > imageElements.length -1) {
+    currentSlide = 0;
+  }
+
+  if ( currentSlide === imageElements.length - 1 ) {
+    document.getElementById("v0").src = imagePositions[currentSlide];
+    document.getElementById("n1").src = imagePositions[0];
+    document.getElementById("p1").src = imagePositions[currentSlide-1];
+  }
+  else if (currentSlide === 0) {
+    document.getElementById("v0").src = imagePositions[currentSlide];
+    document.getElementById("n1").src = imagePositions[currentSlide+1];
+    document.getElementById("p1").src = imagePositions[imageElements.length-1];
+  }
+  else {
+    document.getElementById("v0").src = imagePositions[currentSlide];
+    document.getElementById("n1").src = imagePositions[currentSlide+1];
+    document.getElementById("p1").src = imagePositions[currentSlide-1];
+  }
 }
 
 function PrevImg() {
   currentSlide--;
-  document.getElementById("v0").src = imagePositions[currentSlide];
-  document.getElementById("n1").src = imagePositions[currentSlide+1];
-  document.getElementById("p1").src = imagePositions[currentSlide-1];
+
+  if (currentSlide < 0 ) {
+    currentSlide = imageElements.length - 1
+  }
+
+  if ( currentSlide === imageElements.length - 1 ) {
+    document.getElementById("v0").src = imagePositions[currentSlide];
+    document.getElementById("n1").src = imagePositions[0];
+    document.getElementById("p1").src = imagePositions[currentSlide-1];
+  }
+  else if (currentSlide === 0) {
+    document.getElementById("v0").src = imagePositions[currentSlide];
+    document.getElementById("n1").src = imagePositions[currentSlide+1];
+    document.getElementById("p1").src = imagePositions[imageElements.length-1];
+  }
+  else {
+    document.getElementById("v0").src = imagePositions[currentSlide];
+    document.getElementById("n1").src = imagePositions[currentSlide+1];
+    document.getElementById("p1").src = imagePositions[currentSlide-1];
+  }
 }
 
 // Fermeture du carousel
