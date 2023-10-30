@@ -13,11 +13,11 @@
 
 @keyframes ZoomOut {
     0% {
-        width: 175vw;
+        width: 175dvw;
         opacity: 0%;
     }
     100% {
-        width: 105vw;
+        width: 105dvw;
         opacity: 100%;
     }
 }
@@ -32,7 +32,7 @@
 .landing img {
     position: absolute;
     animation: ZoomOut 3s cubic-bezier(.45,.36,.17,.97) 0s;
-    width: 105vw;
+    width: 105dvw;
 }
 
 @keyframes SlidingLeftToRight {
@@ -49,10 +49,10 @@
 
 .landing h1 {
     position: absolute;
-    bottom: 5vw;
-    left: 5vw;
-    font-size: 10vw;
-    line-height: 9vw;
+    bottom: 5dvw;
+    left: 5dvw;
+    font-size: 10dvw;
+    line-height: 9dvw;
     color: white;
     margin: 0;
     animation: SlidingLeftToRight 3s cubic-bezier(.45,.36,.17,.97) 0s;
@@ -251,10 +251,10 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
     flex-wrap: wrap;
-    width: 90vw;
+    width: 90dvw;
     border-left: 1px solid var(--main-accent-color);
     border-right: 1px solid var(--main-accent-color);
-    padding: 0 2.5vw;
+    padding: 0 2.5dvw;
 }
 
 .images-containers {
