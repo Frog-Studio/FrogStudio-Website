@@ -1,9 +1,25 @@
 /* MAIN */
+
+h2 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+h2 span {
+    color: var(--main-accent-color);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
 /* Sections */
 
 /* Frog Studio presentation */
 .landing {
-    width: 100vw;
+    width: 100dvw;
     aspect-ratio: 17/9;
     padding: 0;
     overflow: hidden;
@@ -16,11 +32,11 @@
 
 @keyframes ZoomOut {
     0% {
-        width: 175vw;
+        width: 175dvw;
         opacity: 0%;
     }
     100% {
-        width: 105vw;
+        width: 105dvw;
         opacity: 100%;
     }
 }
@@ -35,7 +51,7 @@
 .landing img {
     position: absolute;
     animation: ZoomOut 3s cubic-bezier(.45,.36,.17,.97) 0s;
-    width: 105vw;
+    width: 105dvw;
 }
 
 @keyframes SlidingLeftToRight {
@@ -52,10 +68,10 @@
 
 .landing h1 {
     position: absolute;
-    bottom: 5vw;
-    left: 5vw;
-    font-size: 10vw;
-    line-height: 9vw;
+    bottom: 5dvw;
+    left: 5dvw;
+    font-size: 10dvw;
+    line-height: 9dvw;
     color: var(--main-accent-color);
     margin: 0;
     animation: SlidingLeftToRight 3s cubic-bezier(.45,.36,.17,.97) 0s;
@@ -63,8 +79,8 @@
 
 .landing h1::before {
     color: white;
-    font-size: 3vw;
-    line-height: 1vw;
+    font-size: 3dvw;
+    line-height: 1dvw;
     font-weight: 100;
     content: "Bienvenue chez";
 }
@@ -85,8 +101,8 @@
 }
 
 .grid-images a {
-    height: 25vw;
-    width: 25vw;
+    height: 25dvw;
+    width: 25dvw;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -95,14 +111,14 @@
 }
 
 .grid-images img {
-    height: 25vw;
+    height: 25dvw;
     transition: height 1s;
     aspect-ratio: 1/1;
 }
 
 .grid-images a:hover img {
     transition: height 0.5s;
-    height: 27vw;
+    height: 27dvw;
 }
 
 .grid-images h2 {
@@ -112,7 +128,7 @@
     transition: bottom 1s cubic-bezier(.45,.36,.17,.97);
     text-align: center;
     text-shadow: black 0 0 10px;
-    font-size: 1.1vw;
+    font-size: 1.1dvw;
     color: var(--main-accent-color);
     background-color: rgba(0, 0, 0, 0.4);
     background-size: contain;
@@ -129,20 +145,20 @@
 .graphic-projects {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 25vw 25vw 25vw 25vw;
+    grid-template-rows: 25dvw 25dvw 25dvw 25dvw;
 }
 
 .photo-projects {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 25vw 25vw 25vw 25vw;
+    grid-template-rows: 25dvw 25dvw 25dvw 25dvw;
 }
 /* fin de grids for projects */
 
 /* Carrousel */
 .carrousel {
-    height: 100vh;
-    width: 100vw;
+    height: 100dvh;
+    width: 100dvw;
     background-color: black;
     margin: 0;
     overflow: hidden;   
@@ -166,4 +182,66 @@
     object-position: 100% center;
 }
 /*Fin du carrousel*/
+
+
+
+
+
+
+
+
+/* NOUVELLES SECTION POUR LA PAGE D4ACCEUIL */
+
+/* début section projets */
+
+/* fin section projets */
+
+/* Début du carousel photo */
+
+.photo-carousel {
+    position: absolute;
+    height: 100dvh;
+    width: 100dvw;
+    border-top: 1px solid var(--main-accent-color);
+    border-bottom: 1px solid var(--main-accent-color);
+}
+
+
+.photo-carousel h2 {
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+}
+
+.car-photo {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.car-photo-container {
+    display: flex;
+    flex-direction: column;
+    height: 40dvh;
+    width: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.car-photo-container img {
+    flex: 1;
+    object-fit: contain;
+    border-radius: 3rem;
+    height: 100%;
+}
+
+.Know-More {
+    text-decoration: none;
+}
+/* fin du carousel photo */
+
 /*FIN DU MAIN*/

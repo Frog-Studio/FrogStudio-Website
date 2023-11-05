@@ -18,14 +18,14 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100dvh;
-    padding: 0 20dvw;
+    height: 130dvh;
+    padding: 0 15dvw;
     padding-top: 3rem;
 }
 
 .img-container {
-    height: 25dvh;
-    width: 25dvh;
+    min-height: 25dvh;
+    aspect-ratio: 1/1;
     overflow: hidden;
     display: flex;
     align-items: center;
