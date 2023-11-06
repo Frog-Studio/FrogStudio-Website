@@ -92,7 +92,7 @@ a {
 /* Fin Frog Studio presentation */
 
 /* Grids for projects */
-.grid-images {
+.graphic-projects {
     display: grid;
     grid-template-columns: 50vw 50vw;
     gap: 0.25rem;
@@ -100,7 +100,7 @@ a {
     padding: 0;
 }
 
-.grid-images a {
+.graphic-projects a {
     height: 25dvw;
     width: 25dvw;
     overflow: hidden;
@@ -110,18 +110,18 @@ a {
     justify-content: center;
 }
 
-.grid-images img {
+.graphic-projects img {
     height: 25dvw;
     transition: height 1s;
     aspect-ratio: 1/1;
 }
 
-.grid-images a:hover img {
+.graphic-projects a:hover img {
     transition: height 0.5s;
     height: 27dvw;
 }
 
-.grid-images h2 {
+.graphic-projects h3 {
     position: absolute;
     width: 100%;
     bottom: -100%;
@@ -137,7 +137,7 @@ a {
     margin: 0;
 }
 
-.grid-images a:hover h2 {
+.graphic-projects a:hover h3 {
     bottom: 0;
     transition: bottom 0.5s cubic-bezier(.45,.36,.17,.97);
 }
@@ -154,6 +154,115 @@ a {
     grid-template-rows: 25dvw 25dvw 25dvw 25dvw;
 }
 /* fin de grids for projects */
+
+
+
+
+
+
+
+
+
+
+/* NOUVELLES SECTION POUR LA PAGE D4ACCEUIL */
+
+/* début section projets */
+.graphic-projects {
+    width: 100dvw;
+}
+
+.grid-projects {
+    position: relative;
+}
+
+.grid-projects a {
+
+}
+
+.grid-projects img {
+    width: 40dvw;
+}
+/* fin section projets */
+
+/* Début du carousel photo */
+.photo-carousel {
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.photo-carousel::after,
+.photo-carousel::before {
+    position: absolute;
+    content: "";
+    height: 100dvh;
+    width: 15dvw;
+    background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+    z-index: 2;
+}
+
+.photo-carousel::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.photo-carousel::before {
+    left: 0;
+    top: 0;
+}
+
+.photo-carousel h2 {
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    z-index: 3;
+}
+
+.car-photo {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    height: 50%;
+}
+
+.car-photo-container {
+    height: 40dvh;
+    width: auto;
+}
+
+.car-photo-container img {
+    object-fit: contain;
+    border-radius: 3rem;
+    height: 100%;
+}
+
+#CD-G {
+    animation: scroll var(--animationSpeed) linear infinite;
+}
+
+#CG-D {
+    flex-direction: row-reverse;
+    animation: backscroll var(--animationSpeed) linear infinite;
+}
+
+/* the animation */
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-43.4dvh * 7))}
+}
+
+@keyframes backscroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(43.4dvh * 7))}
+}
+/* fin de l'animaiton */
+
+.Know-More {
+    text-decoration: none;
+}
+/* fin du carousel photo */
 
 /* Carrousel */
 .carrousel {
@@ -182,66 +291,5 @@ a {
     object-position: 100% center;
 }
 /*Fin du carrousel*/
-
-
-
-
-
-
-
-
-/* NOUVELLES SECTION POUR LA PAGE D4ACCEUIL */
-
-/* début section projets */
-
-/* fin section projets */
-
-/* Début du carousel photo */
-
-.photo-carousel {
-    position: absolute;
-    height: 100dvh;
-    width: 100dvw;
-    border-top: 1px solid var(--main-accent-color);
-    border-bottom: 1px solid var(--main-accent-color);
-}
-
-
-.photo-carousel h2 {
-    position: relative;
-    top: 2rem;
-    left: 2rem;
-}
-
-.car-photo {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    gap: 2rem;
-    padding-bottom: 2rem;
-}
-
-.car-photo-container {
-    display: flex;
-    flex-direction: column;
-    height: 40dvh;
-    width: auto;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.car-photo-container img {
-    flex: 1;
-    object-fit: contain;
-    border-radius: 3rem;
-    height: 100%;
-}
-
-.Know-More {
-    text-decoration: none;
-}
-/* fin du carousel photo */
 
 /*FIN DU MAIN*/

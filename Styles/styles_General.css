@@ -12,6 +12,7 @@ body {
 
 :root {
     --main-accent-color: #5EB030;
+    --animationSpeed : 30s;
 }
 
 /* Scroll bar*/
