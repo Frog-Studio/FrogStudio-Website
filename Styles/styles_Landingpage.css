@@ -128,7 +128,7 @@ a {
 }
 
 .project:hover {
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
     transition: box-shadow 1s ease;
 }
 
@@ -140,10 +140,10 @@ a {
     transition: transform 1s ease;
     text-align: center;
     text-shadow: black 0 0 20px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background: radial-gradient(circle at top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 100%);
     background-size: contain;
     padding: 1rem 0;
-    border-top: 1px var(--main-accent-color);
+    border-top: 1px solid var(--main-accent-color);
 }
 
 .project:hover a {

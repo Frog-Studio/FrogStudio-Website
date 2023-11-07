@@ -1,3 +1,9 @@
+h2 {
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--main-accent-color);
+}
+
 /* Landing First Section */
 .landing {
     width: 100vw;
@@ -116,22 +122,67 @@
 /* Description section */
 .description {
     display: grid;
-    padding: 0 5dvw;
-    color: white;
-    font-weight: 300;
+    padding: 0 15dvw;
     border-top: 1px solid var(--main-accent-color);
 }
 
-.description h2 {
-    color: var(--main-accent-color);
-    font-weight: 500;
+.Inspirations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.Inspishow {
+    display: flex;
+    width: 70dvw;   
+    justify-content: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.Inspishow img {
+    object-fit: cover;
+}
+
+.Concept {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.production {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.production video {
+    width: 50dvh;
+}
+
 /* Fin Description section */
 
 /* Final Show */
 .rendu-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(var(--main-accent-color) 0%, transparent 80%);
+    border-top: 1px solid var(--main-accent-color);
 }
 
 .theshow {
+    height: 80dvh;
+    width: fit-content;
+    box-shadow: 0 0 300px -50px var(--main-accent-color);
 }
 /* FIn final Show */
+
+.remerciements {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    background: none;
+    font-size: 2rem;
+}
