@@ -12,7 +12,7 @@ body {
 
 :root {
     --main-accent-color: #5EB030;
-    --animationSpeed : 30s;
+    --main-accent-color-alpha: rgba(94, 176, 48, 0.4);
 }
 
 /* Scroll bar*/
@@ -214,6 +214,17 @@ header {
 main {
     background-color: black;
 }
+
+/* En voir plus */
+.Know-More {
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+/* Fin de En voir plus */
+
 /* fin du Main */
 
 /* FOOTER */

@@ -4,9 +4,19 @@ h2 {
     font-size: 5rem;
     font-weight: 800;
     margin: 0;
+    width: 100%;
+    z-index: 3;
+    padding-left: 2dvw;
 }
 
 h2 span {
+    color: var(--main-accent-color);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
     color: var(--main-accent-color);
 }
 
@@ -20,14 +30,12 @@ a {
 /* Frog Studio presentation */
 .landing {
     width: 100dvw;
-    aspect-ratio: 17/9;
-    padding: 0;
+    aspect-ratio: 16/9;
     overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
 }
 
 @keyframes ZoomOut {
@@ -56,10 +64,10 @@ a {
 
 @keyframes SlidingLeftToRight {
     0% {
-        transform: translateX(-120%);
+        transform: translateX(-150%);
     }
     20% {
-        transform: translateX(-120%);
+        transform: translateX(-150%);
     }
     100% {
         transform: translateX(0%);
@@ -92,111 +100,83 @@ a {
 /* Fin Frog Studio presentation */
 
 /* Grids for projects */
-.graphic-projects {
-    display: grid;
-    grid-template-columns: 50vw 50vw;
-    gap: 0.25rem;
-    background: var(--main-accent-color);
-    padding: 0;
-}
-
-.graphic-projects a {
-    height: 25dvw;
-    width: 25dvw;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.graphic-projects img {
-    height: 25dvw;
-    transition: height 1s;
-    aspect-ratio: 1/1;
-}
-
-.graphic-projects a:hover img {
-    transition: height 0.5s;
-    height: 27dvw;
-}
-
-.graphic-projects h3 {
-    position: absolute;
-    width: 100%;
-    bottom: -100%;
-    transition: bottom 1s cubic-bezier(.45,.36,.17,.97);
-    text-align: center;
-    text-shadow: black 0 0 10px;
-    font-size: 1.1dvw;
-    color: var(--main-accent-color);
-    background-color: rgba(0, 0, 0, 0.4);
-    background-size: contain;
-    padding: 20px 0;
-    border-top: 1px var(--main-accent-color);
-    margin: 0;
-}
-
-.graphic-projects a:hover h3 {
-    bottom: 0;
-    transition: bottom 0.5s cubic-bezier(.45,.36,.17,.97);
-}
 
 .graphic-projects {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 25dvw 25dvw 25dvw 25dvw;
-}
-
-.photo-projects {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 25dvw 25dvw 25dvw 25dvw;
-}
-/* fin de grids for projects */
-
-
-
-
-
-
-
-
-
-
-/* NOUVELLES SECTION POUR LA PAGE D4ACCEUIL */
-
-/* début section projets */
-.graphic-projects {
-    width: 100dvw;
+    border-top: 1px solid var(--main-accent-color);
 }
 
 .grid-projects {
+    display: grid;
+    grid-template-columns: 25dvw 25dvw 25dvw 25dvw;
+    grid-template-rows: 25dvw 25dvw;
+    justify-content: center;
+    align-items: center;
+}
+
+.project{
+    display: flex;
+    height: 20dvw;
+    aspect-ratio: 1/1;
+    overflow: hidden;
     position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.5s ease;
+    margin: auto;
 }
 
-.grid-projects a {
-
+.project:hover {
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.4);
+    transition: box-shadow 1s ease;
 }
 
-.grid-projects img {
-    width: 40dvw;
+.project a {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: transform 1s ease;
+    text-align: center;
+    text-shadow: black 0 0 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: contain;
+    padding: 1rem 0;
+    border-top: 1px var(--main-accent-color);
 }
-/* fin section projets */
+
+.project:hover a {
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+
+.project img {
+    height: auto;
+    width: 100%;
+    aspect-ratio: 1/1;
+    transition: width 1s ease;
+}
+
+.project:hover img {
+    width: 115%;
+    transition: width 0.5s;
+}
+/* Fin Section Graphique */
 
 /* Début du carousel photo */
 .photo-carousel {
-    height: 100dvh;
     width: 100dvw;
-    overflow: hidden;
-    z-index: -1;
+    border-top: 1px solid var(--main-accent-color);
+    z-index: 1;
 }
 
 .photo-carousel::after,
 .photo-carousel::before {
-    position: absolute;
+    position: relative;
+    top: 0;
     content: "";
-    height: 100dvh;
+    height: 100dvh; 
     width: 15dvw;
     background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
     z-index: 2;
@@ -204,20 +184,11 @@ a {
 
 .photo-carousel::after {
     right: 0;
-    top: 0;
     transform: rotateZ(180deg);
 }
 
 .photo-carousel::before {
     left: 0;
-    top: 0;
-}
-
-.photo-carousel h2 {
-    position: relative;
-    top: 2rem;
-    left: 2rem;
-    z-index: 3;
 }
 
 .car-photo {
@@ -238,13 +209,17 @@ a {
     height: 100%;
 }
 
+:root {
+    --animation-speed: 30s;
+}
+
 #CD-G {
-    animation: scroll var(--animationSpeed) linear infinite;
+    animation: scroll var(--animation-speed) linear infinite;
 }
 
 #CG-D {
     flex-direction: row-reverse;
-    animation: backscroll var(--animationSpeed) linear infinite;
+    animation: backscroll var(--animation-speed) linear infinite;
 }
 
 /* the animation */
@@ -258,20 +233,16 @@ a {
 	100% { transform: translateX(calc(43.4dvh * 7))}
 }
 /* fin de l'animaiton */
-
-.Know-More {
-    text-decoration: none;
-}
 /* fin du carousel photo */
 
 /* Carrousel */
 .carrousel {
     height: 100dvh;
     width: 100dvw;
-    background-color: black;
     margin: 0;
     overflow: hidden;   
     position: relative;
+    border-top: 1px solid var(--main-accent-color);
 }
 
 #image-track {

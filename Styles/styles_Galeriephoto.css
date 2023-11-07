@@ -1,14 +1,13 @@
 /* Landing photo */
 .landing {
     width: 100dvw;
-    height: 100dvh; 
-    padding: 0;
+    aspect-ratio: 16/9;
     overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    border-bottom: 1px solid var(--main-accent-color);
 }
 
 @keyframes ZoomOut {

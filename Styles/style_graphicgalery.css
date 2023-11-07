@@ -1,0 +1,74 @@
+/* Styles pour la page galerie de mes projets graphiques */
+
+h1 {
+    font-size: 10dvw;
+}
+
+h2 {
+    margin: 0;
+    font-size: 4dvw;
+    color: var(--main-accent-color);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    height: 100%;
+    transition: height 1s ease;
+    object-fit: cover;
+}
+
+.graphicgalery-landing {
+    display: block;
+    height: 75px;
+}
+
+.graphicgalery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.project {
+    display: flex;
+    height: 75dvh;
+    width: 100dvw;
+    border-top: 1px solid var(--main-accent-color);
+    align-items: center;
+    justify-content: space-around;
+    background: radial-gradient(circle at left, var(--main-accent-color-alpha) 0%, transparent 75%);
+}
+
+.description {
+    height: 80%;
+    width: 40dvw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project:nth-child(even) {
+    flex-direction: row-reverse;
+    background: radial-gradient(circle at right , var(--main-accent-color-alpha) 0%, transparent 75%);
+}
+
+.image-container {
+    display: flex;
+    height: 80%;
+    aspect-ratio: 1/1;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.image-container:hover img {
+    height: 125%;
+    transition: height 2s ease;
+}
+
+/* fin */
