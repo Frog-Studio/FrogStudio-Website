@@ -71,4 +71,49 @@ img {
     transition: height 2s ease;
 }
 
+/* Animation de chargement */
+
+.project:nth-child(even) .description {
+    transform: translateX(-125%);
+    animation: projectgaleryonloadminus 2s ease forwards;
+}
+
+.project:nth-child(odd) .description {
+    transform: translateX(125%);
+    animation: projectgaleryonloadplus 2s ease forwards;
+}
+
+.project:nth-child(even) .image-container {
+    transform: translateX(125%);
+    animation: projectgaleryonloadplus 2s ease forwards;
+}
+
+.project:nth-child(odd) .image-container {
+    transform: translateX(-125%);
+    animation: projectgaleryonloadminus 2s ease forwards;
+}
+
+@keyframes projectgaleryonloadminus {
+    0% {
+        opacity: 0;
+        transform: translateX(-125%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes projectgaleryonloadplus {
+    0% {
+        opacity: 0;
+        transform: translateX(125%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fin de l'animation de chargement */
 /* fin */
