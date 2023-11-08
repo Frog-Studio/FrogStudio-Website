@@ -44,7 +44,7 @@ a {
         opacity: 0%;
     }
     100% {
-        width: 105dvw;
+        width: 100dvw;
         opacity: 100%;
     }
 }
@@ -59,7 +59,7 @@ a {
 .landing img {
     position: absolute;
     animation: ZoomOut 3s cubic-bezier(.45,.36,.17,.97) 0s;
-    width: 105dvw;
+    width: 100dvw;
 }
 
 @keyframes SlidingLeftToRight {

@@ -21,7 +21,7 @@ h2 {
         opacity: 0%;
     }
     100% {
-        width: 105vw;
+        width: 100vw;
         opacity: 100%;
     }
 }
@@ -35,13 +35,7 @@ h2 {
 
 .landing img,
 .landing video {
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.landing video {
-    transform: translateX(-50%);
+    width: 100dvw;
 }
 
 .landing img {
@@ -134,10 +128,11 @@ h2 {
 
 .Inspishow {
     display: flex;
-    width: 70dvw;   
+    width: 70dvw;
     justify-content: center;
     overflow: hidden;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .Inspishow img {
@@ -170,6 +165,11 @@ h2 {
     align-items: center;
     background: radial-gradient(var(--main-accent-color) 0%, transparent 80%);
     border-top: 1px solid var(--main-accent-color);
+    padding-bottom: 2rem;
+}
+
+.rendu-final img {
+    box-shadow: none !important;
 }
 
 .theshow {
