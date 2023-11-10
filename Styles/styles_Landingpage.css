@@ -26,63 +26,9 @@ a {
 }
 
 /* Sections */
-
-/* Frog Studio presentation */
-.landing {
-    width: 100dvw;
-    aspect-ratio: 16/9;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@keyframes ZoomOut {
-    0% {
-        width: 175dvw;
-        opacity: 0%;
-    }
-    100% {
-        width: 100dvw;
-        opacity: 100%;
-    }
-}
-
-.landinginmagecontainer {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.landing img {
-    position: absolute;
-    animation: ZoomOut 3s cubic-bezier(.45,.36,.17,.97) 0s;
-    width: 100dvw;
-}
-
-@keyframes SlidingLeftToRight {
-    0% {
-        transform: translateX(-150%);
-    }
-    20% {
-        transform: translateX(-150%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-
+/* Landing */
 .landing h1 {
-    position: absolute;
-    bottom: 5dvw;
-    left: 5dvw;
-    font-size: 10dvw;
-    line-height: 9dvw;
     color: var(--main-accent-color);
-    margin: 0;
-    animation: SlidingLeftToRight 3s cubic-bezier(.45,.36,.17,.97) 0s;
 }
 
 .landing h1::before {
@@ -97,7 +43,7 @@ a {
     color: white;
     content: "Studio";
 }
-/* Fin Frog Studio presentation */
+/* Fin Landing */
 
 /* Grids for projects */
 

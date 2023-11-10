@@ -184,12 +184,9 @@ header {
     }
 
     .mobile-menu {
-        display: none;
         background-color: #333;
         position: absolute;
         top: 60px;
-        right: 0;
-        left: 0;
     }
 
     .mobile-menu ul {
@@ -214,6 +211,114 @@ header {
 main {
     background-color: black;
 }
+/* Fin Main */
+
+/* Landing */
+.landing {
+    width: 100dvw;
+    aspect-ratio: 16/8.2;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--main-accent-color);
+}
+
+@keyframes ZoomOut {
+    0% {
+        width: 175vw;
+        opacity: 0%;
+    }
+    100% {
+        width: 100vw;
+        opacity: 100%;
+    }
+}
+
+.landinginmagecontainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing img,
+.landing video {
+    width: 100dvw;
+}
+
+.landing img {
+    animation: ZoomOut 3s cubic-bezier(.45,.36,.17,.97) 0s;
+}
+
+@keyframes SlidingLeftToRight {
+    20% {
+        transform: translateX(-120%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.landing h1 {
+	z-index: 1;
+    position: absolute;
+    bottom: 5vw;
+    left: 5vw;
+    font-size: 10vw;
+    line-height: 9vw;
+    color: white;
+    margin: 0;
+    animation: SlidingLeftToRight 3s cubic-bezier(.45,.36,.17,.97) 0s;
+}
+
+.landing h1::first-line {
+    color: var(--main-accent-color);
+    text-transform: uppercase;
+}
+
+.VideoOnLoad {
+	height: 100dvh;
+	width: 100%;
+}
+
+* { box-sizing: border-box; }
+
+#bound-one {
+	background: #d0d8db;
+}
+.scroll-bound {
+	height: 500vh;
+	
+	.content {
+		height: 100vh;
+		width: 100%;
+		position: sticky;
+		top:0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	video {
+		width: 100%;
+	}
+}
+
+.content {
+	height: 100vh;
+	width: 100%;
+	position: sticky;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+/* Fin Landing */
+
 
 /* En voir plus */
 .Know-More {
