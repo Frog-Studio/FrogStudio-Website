@@ -4,115 +4,6 @@ h2 {
     color: var(--main-accent-color);
 }
 
-/* Landing First Section */
-.landing {
-    width: 100vw;
-    aspect-ratio: 16/9;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@keyframes ZoomOut {
-    0% {
-        width: 175vw;
-        opacity: 0%;
-    }
-    100% {
-        width: 100vw;
-        opacity: 100%;
-    }
-}
-
-.landinginmagecontainer {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.landing img,
-.landing video {
-    width: 100dvw;
-}
-
-.landing img {
-    animation: ZoomOut 3s cubic-bezier(.45,.36,.17,.97) 0s;
-}
-
-@keyframes SlidingLeftToRight {
-    0% {
-        transform: translateX(-120%);
-    }
-    20% {
-        transform: translateX(-120%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-.landing h1 {
-	z-index: 1;
-    position: absolute;
-    bottom: 5vw;
-    left: 5vw;
-    font-size: 10vw;
-    line-height: 9vw;
-    color: white;
-    margin: 0;
-    animation: SlidingLeftToRight 3s cubic-bezier(.45,.36,.17,.97) 0s;
-}
-
-.landing h1::first-line {
-    color: var(--main-accent-color);
-    text-transform: uppercase;
-}
-
-.VideoOnLoad {
-	height: 100dvh;
-	width: 100%;
-}
-
-* { box-sizing: border-box; }
-
-#bound-one {
-	background: #d0d8db;
-}
-.scroll-bound {
-	height: 500vh;
-	
-	.content {
-		height: 100vh;
-		width: 100%;
-		position: sticky;
-		top:0;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	
-	video {
-		width: 100%;
-	}
-}
-
-.content {
-	height: 100vh;
-	width: 100%;
-	position: sticky;
-	top: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-/* Fin landing First Section */
-
 /* Description section */
 .description {
     display: grid;
@@ -128,7 +19,7 @@ h2 {
 
 .Inspishow {
     display: flex;
-    width: 70dvw;
+    width: 75dvw;
     justify-content: center;
     overflow: hidden;
     flex-wrap: wrap;
@@ -136,7 +27,8 @@ h2 {
 }
 
 .Inspishow img {
-    object-fit: cover;
+    object-fit: contain;
+    width: 20dvw;
 }
 
 .Concept {
