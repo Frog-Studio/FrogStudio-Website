@@ -61,7 +61,7 @@ a {
 
 .project{
     display: flex;
-    height: 20dvw;
+    height: 80%;
     aspect-ratio: 1/1;
     overflow: hidden;
     position: relative;
@@ -74,25 +74,25 @@ a {
 }
 
 .project:hover {
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 50px var(--main-accent-color);
     transition: box-shadow 1s ease;
 }
 
-.project a {
+.project h3 {
     position: absolute;
     width: 100%;
     bottom: 0;
     transform: translateY(100%);
     transition: transform 1s ease;
     text-align: center;
-    text-shadow: black 0 0 20px;
+    text-shadow: black -10 -10 50px;
     background: radial-gradient(circle at top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 100%);
     background-size: contain;
     padding: 1rem 0;
     border-top: 1px solid var(--main-accent-color);
 }
 
-.project:hover a {
+.project:hover h3 {
     transform: translateY(0);
     transition: transform 0.5s ease;
 }
@@ -112,11 +112,13 @@ a {
 
 /* Début du carousel photo */
 .photo-carousel {
+    height: 100dvh;
     width: 100dvw;
     border-top: 1px solid var(--main-accent-color);
     z-index: 1;
+    overflow: hidden;
 }
-
+/*
 .photo-carousel::after,
 .photo-carousel::before {
     position: relative;
@@ -136,12 +138,12 @@ a {
 .photo-carousel::before {
     left: 0;
 }
-
+*/
 .car-photo {
     display: flex;
     gap: 2rem;
     padding-bottom: 2rem;
-    height: 50%;
+    height: 45%;
 }
 
 .car-photo-container {
@@ -153,6 +155,7 @@ a {
     object-fit: contain;
     border-radius: 3rem;
     height: 100%;
+    box-shadow: 0 0 20px var(--main-accent-color);
 }
 
 :root {
@@ -210,3 +213,12 @@ a {
 /*Fin du carrousel*/
 
 /*FIN DU MAIN*/
+
+/* Media querries */
+@media (max-width: 800px) {
+    /* Grille projets */
+    .grid-projects {
+        grid-template-columns: 50vw 50dvw;
+        grid-template-rows: 50dvw 50dvw 50dvw 50dvw;
+    }
+}

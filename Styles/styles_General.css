@@ -15,8 +15,9 @@ body {
     --main-accent-color-alpha: rgba(94, 176, 48, 0.4);
 }
 
-/* Scroll bar*/
+/* Scroll bar */
 ::-webkit-scrollbar {
+    display: none;
     width: 0.25rem;
     border-color: black;
 }
@@ -52,14 +53,31 @@ header {
     position: fixed;
     justify-content: space-between;
     padding: 10px;
-    background-color: black;
     color: #fff;
-    height: 55px;
+    height: 100px;
     width: 100vw;
-    z-index: 999;
-    animation: 3.5s cubic-bezier(.55,.13,.18,.93) 0s HideHeader;
+    z-index: 20;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), transparent);
+    animation: 2.5s cubic-bezier(.55,.13,.18,.93) HideHeader;
+}
+/*
+@keyframes scrolled {
+    from {
+      height: 100px;
+      opacity: 1;
+    }
+    to {
+      height: 50px;
+      opacity: 0.5;
+    }
 }
 
+header.scrolled {
+    background: black;
+    border-bottom: 1px solid var(--main-accent-color);
+    transition: scrolled 1s ease;
+}
+*/
 .logo {
     display: flex;
     align-items: center;
@@ -174,37 +192,12 @@ header {
     text-decoration: none;
     text-align: center;
 }
+
+.mobile-menu li {
+    list-style: none;
+}
 /* Fin du menu burger */
 
-/* Media Queries pour la réactivité */
-/* Styles pour les écrans de largeur <= 768px */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    .mobile-menu {
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-    }
-
-    .mobile-menu ul {
-        padding: 0;
-    }
-
-    .mobile-menu li {
-        list-style: none;
-        margin: 0;
-    }
-
-    .mobile-menu a {
-        color: #fff;
-        text-decoration: none;
-        display: block;
-        padding: 10px;
-    }
-}
 /* FIN DU HEADER */
 
 /* Main */
@@ -215,8 +208,7 @@ main {
 
 /* Landing */
 .landing {
-    width: 100dvw;
-    aspect-ratio: 16/8.2;
+    height: 100dvh;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -227,11 +219,13 @@ main {
 
 @keyframes ZoomOut {
     0% {
-        width: 175vw;
+        width: 175dvw;
+        height: auto;
         opacity: 0%;
     }
     100% {
-        width: 100vw;
+        width: 100dvw;
+        height: auto;
         opacity: 100%;
     }
 }
@@ -245,6 +239,7 @@ main {
 
 .landing img,
 .landing video {
+    height: auto;
     width: 100dvw;
 }
 
@@ -266,11 +261,12 @@ main {
     position: absolute;
     bottom: 5vw;
     left: 5vw;
+    transform: translateX(-120%);
     font-size: 10vw;
     line-height: 9vw;
     color: white;
     margin: 0;
-    animation: SlidingLeftToRight 3s cubic-bezier(.45,.36,.17,.97) 0s;
+    animation: SlidingLeftToRight 3s cubic-bezier(.45,.36,.17,.97) 0s forwards;
 }
 
 .landing h1::first-line {
@@ -355,3 +351,35 @@ footer a {
     text-decoration: none;
 }
 /*FIN DU FOOTER*/
+
+/* Media Queries pour la réactivité */
+/* Styles pour les écrans de largeur <= var(--media-querry-width) */
+@media (max-width: 800px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .mobile-menu {
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+    }
+
+    .mobile-menu ul {
+        padding: 0;
+    }
+
+    .mobile-menu a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .landing {
+        height: 100%;
+        width: 100dvw;
+    }
+}
