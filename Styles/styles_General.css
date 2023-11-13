@@ -219,13 +219,13 @@ main {
 
 @keyframes ZoomOut {
     0% {
-        width: 175dvw;
-        height: auto;
+        width: auto;
+        height: 125dvh;
         opacity: 0%;
     }
     100% {
-        width: 100dvw;
-        height: auto;
+        width: auto;
+        height: 100dvh;
         opacity: 100%;
     }
 }
@@ -239,8 +239,8 @@ main {
 
 .landing img,
 .landing video {
-    height: auto;
-    width: 100dvw;
+    height: 100dvh;
+    width: auto;
 }
 
 .landing img {
@@ -377,9 +377,30 @@ footer a {
     }
 }
 
-@media (max-aspect-ratio: 16/9) {
+@media (min-aspect-ratio: 16/9) {
     .landing {
-        height: 100%;
+        height: 100dvh;
         width: 100dvw;
     }
+
+    @keyframes ZoomOut {
+        0% {
+            width: 175dvw;
+            height: auto;
+            opacity: 0%;
+        }
+        100% {
+            width: 100dvw;
+            height: auto;
+            opacity: 100%;
+        }
+    }
+    
+    .landing img,
+    .landing video {
+        height: auto;
+        width: 100dvw;
+    }
+
+
 }
