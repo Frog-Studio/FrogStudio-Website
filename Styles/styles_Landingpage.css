@@ -45,6 +45,12 @@ a {
 }
 /* Fin Landing */
 
+/* Short Prez */
+.ShortAbout p{
+    margin: 0 20dvw;
+}
+/* Short Prez */
+
 /* Grids for projects */
 
 .graphic-projects {
