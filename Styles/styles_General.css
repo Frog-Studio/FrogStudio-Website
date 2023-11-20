@@ -255,7 +255,7 @@ main {
 
 @keyframes SlidingLeftToRight {
     20% {
-        transform: translateX(-120%);
+        transform: translateX(-140%);
     }
     100% {
         transform: translateX(0%);
@@ -265,14 +265,14 @@ main {
 .landing h1 {
 	z-index: 1;
     position: absolute;
-    bottom: 5vw;
-    left: 5vw;
-    transform: translateX(-120%);
+    bottom: 5dvw;
+    left: 5dvw;
+    transform: translateX(-140%);
     font-size: 10dvw;
     line-height: 9vw;
     color: white;
     margin: 0;
-    animation: SlidingLeftToRight 3s cubic-bezier(.45,.36,.17,.97) 0s forwards;
+    animation: SlidingLeftToRight 3s cubic-bezier(.45,.36,.17,.97) 0.75s forwards;
 }
 
 .landing h1::first-line {
@@ -376,7 +376,6 @@ footer a {
     }
 
     .mobile-menu a {
-        color: #fff;
         text-decoration: none;
         display: block;
         padding: 10px;
@@ -384,12 +383,8 @@ footer a {
     
     .landing h1 {
         font-size: 5rem;
-        line-height: 5rem;
-    }
-    
-    .landing h1::before {
-        font-size: 2rem;
-        line-height: 2rem;
+        line-height: 4.5rem;
+        bottom: 3rem;
     }
 }
 

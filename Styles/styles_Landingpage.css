@@ -27,31 +27,49 @@ a {
 
 /* Sections */
 /* Landing */
-.landing h1 {
-    color: var(--main-accent-color);
-}
-
-.landing h1::before {
+.landing p {
+    z-index: 2;
+    position: absolute;
+    bottom: 21dvw;
+    left: 5.5dvw;
     color: white;
     font-size: 3dvw;
     line-height: 1dvw;
     font-weight: 100;
-    content: "Bienvenue chez";
+    transform: translateX(-140%);
+    animation: SlidingLeftToRight 3s ease 0s forwards;
 }
 
-.landing h1::after {
-    color: white;
-    content: "Studio";
+.landing h1::first-line {
+    color: var(--main-accent-color);
 }
-/* Fin Landing */
 
 /* Short Prez */
-.ShortAbout p{
-    margin: 0 20dvw;
+@keyframes SlidingRightToLeft {
+    20% {
+        transform: translateX(140%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }
-/* Short Prez */
 
-/* Grids for projects */
+#shortabout{
+    z-index: 1;
+    bottom: 5dvw;
+    font-size: 1dvw;
+    line-height: 1.5dvw;
+    font-weight: 300;
+    left: 60dvw;
+    width: 37dvw;
+    background: black;
+    box-shadow: 0 0 20px black;
+    padding: 0.5dvw;
+    border-radius: 0.5rem;
+    transform: translateX(140%);
+    animation: SlidingRightToLeft 3s ease 1s forwards;
+    text-align: justify;
+}
 
 .graphic-projects {
     border-top: 1px solid var(--main-accent-color);
@@ -124,6 +142,7 @@ a {
     z-index: 1;
     overflow: hidden;
 }
+
 /*
 .photo-carousel::after,
 .photo-carousel::before {
@@ -145,6 +164,7 @@ a {
     left: 0;
 }
 */
+
 .car-photo {
     display: flex;
     gap: 2rem;
@@ -226,5 +246,10 @@ a {
     .grid-projects {
         grid-template-columns: 50vw 50dvw;
         grid-template-rows: 50dvw 50dvw 50dvw 50dvw;
+    }
+
+    .landing p {
+        font-size: 1.5rem;
+        bottom: 11rem;
     }
 }
