@@ -37,47 +37,58 @@
             <h1>Cuteness<br>Pills</h1>
             <div class="VideoOnLoad, landingimagecontainer">
                 <video muted preload autoplay>
-                    <source src="Assets/Projets/005Cuteness_Pills/Cuteness Pills Landing Vidz.webm" type="video/webm">
+                    <source src="" type="video/webm">
                     Your user agent does not support the HTML5 Video element.
                 </video>
             </div>
         </section>
+
         <section class="description">
             <div class="Inspirations">
                 <h2>Inspirations</h2>
-                <p>
-                    Le projet m'est venu après la découverte de Créapills, le site d'inspirations Marketing. Le concept de pilules de créativité m’a inspiré pour créer des pilules pour tout et n’importe quoi.
-                </p>
+                <p></p>
                 <div class="Inspishow">
-                    <img src="Assets/Projets/005Cuteness_Pills/Inspirations/7c7a32155bc0407a158717779f7fe32c.jpg" draggable="false">
-                    <img src="Assets/Projets/005Cuteness_Pills/Inspirations/ad97438c106a19f1707942f1896211eb.jpg" draggable="false">
-                    <img src="Assets/Projets/005Cuteness_Pills/Inspirations/c61923a4c781f13e8f435f9bbd3cae50.jpg" draggable="false">
-                    <img src="Assets/Projets/005Cuteness_Pills/Inspirations/e2c886e00c2a2e81ee5c261a529ed037.jpg" draggable="false">
+                    <img src="" draggable="false">
                 </div>
             </div>
             <div class="Concept">
-                <h2>Concept</h2>
-                <p>
-                    Tout en reprenant l'idée de pilule, je l'ai dérivé en un produit vendeur de mignonnerie, dans une ambiance très sérieuse.
-                    <br>La révélation du nom de la pilule dans cette esthétique donne un côté comique à la vidéo.
-                </p>
+                <h2></h2>
+                <p></p>
             </div>
             <div class="production">
                 <h2>Processus de création</h2>
                 <p>La vidéo ci-dessous vous montre les différents éléments de la vidéo sur Blender.</p>
                 <video muted preload autoplay loop>
-                    <source src="Assets/Projets/005Cuteness_Pills/RFull.webm" type="video/webm">
+                    <source src="" type="video/webm">
                     Your user agent does not support the HTML5 Video element.
                 </video>
             </div>
         </section>
+
         <section class="rendu-final">
             <h2>Résultat</h2>
             <video class="theshow" width="auto" preload controls onloadstart="this.volume=0.1">
-                <source src="Assets/Projets/005Cuteness_Pills/Cuteness_Pills.mp4" type="video/mp4">
+                <source src="" type="video/mp4">
                 Votre navigateur ne supporte pas la balise video de HTML5
             </video>
         </section>
+
+        <section class="Inspirations">
+            <h2>Mockup</h2>
+            <div class="Inspishow">
+                <img src="" draggable="false">
+            </div>
+        </section>
+
+        <section class="linkedproject">
+            <div class="linkedprjbackground"><img src="" draggable="false"></div>
+            <a class="linkedprjcontainer" href="3D001JustShoesing.html">
+                <h2></h2>
+                <p></p>
+                <p>--+ En savoir plus +--</p>
+            </a>
+        </section>
+
         <section class="remerciements">
             <h3>Merci de votre attention.</h3>
         </section>
