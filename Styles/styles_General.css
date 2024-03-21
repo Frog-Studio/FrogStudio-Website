@@ -386,6 +386,10 @@ footer a {
         line-height: 4.5rem;
         bottom: 3rem;
     }
+
+    .logo{
+        width: auto;
+    }
 }
 
 @media (min-aspect-ratio: 16/9) {
