@@ -10,12 +10,12 @@ a {
 }
 
 h1 {
-    font-size: 9dvw;
-    line-height: 9dvw;
-    margin-top: 3dvw;
-    margin-bottom: 1dvw;
+    font-size: 6.4rem;
+    line-height: 7rem;
+    margin-top: 20dvh;
+    margin-bottom: 0;
+    margin-left: 2rem;
     color: var(--main-accent-color);
-    animation: ArriveIn 2s cubic-bezier(.42,.08,.48,.95) 0s;
 }
 
 @keyframes ArriveIn {
@@ -28,34 +28,24 @@ h1 {
     }
 }
 
-h2 {
-    font-size: 3rem;
-    margin: 0;
-}
-
 .contactinfo {
     display: flex;
     flex-direction: column;
     height: 100dvh;
 }
 
-.socialnetwork,
-.mail {
-    
-}
-
 .socialnetwork {
     width: 50dvw;
-    height: 20dvh;
+    height: 40dvh;
     flex: 1;
     display: flex;
     flex-direction: column;
-    transform: translateX(-100%);
-    animation: ArriveIn 2s cubic-bezier(.5,.08,.62,1) 1s forwards;
 }
 
 .socialnetwork h2 {
-    padding-left: 3dvw;
+    font-size: 3rem;
+    padding-left: 2rem;
+    margin: 0;
 }
 
 .socialnetwork a {
@@ -67,7 +57,7 @@ h2 {
     align-items: center;
     overflow: hidden;
     transition: flex 0.25s ease;
-    padding-left: 3dvw;
+    padding-left: 2rem;
 }
 
 .socialnetwork a:hover {
@@ -94,16 +84,13 @@ h2 {
     flex: 1;
     padding-left: 3dvw;
     transform: translateX(-100%);
-    animation: ArriveIn 2s cubic-bezier(.42,.08,.48,.95) 2s forwards;
-    padding-left: 3dvw;
+    animation: ArriveIn 2s cubic-bezier(.42,.08,.48,.95) forwards;
+    padding-left: 2rem;
 }
 
 .sideimage {
     width: 50dvw;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
 }
 
@@ -112,10 +99,17 @@ h2 {
     height: 100%;
     width: auto;
     object-fit: cover;
-    transition: height 0.5s ease;
+    top: 0;
+    right: 0;
+    overflow: hidden;
 }
 
-.sideimage img:hover {
-    height: 120%;
-    transition: height 2s cubic-bezier(.29,.06,.42,.9);
+@media (max-width: 1000px) {
+    .socialnetwork {
+        width: 100dvw;
+    }
+
+    .sideimage {
+        display: none;
+    }
 }
