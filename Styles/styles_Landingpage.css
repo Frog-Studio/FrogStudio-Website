@@ -29,15 +29,7 @@ a {
 /* Landing */
 .landing p {
     z-index: 2;
-    position: absolute;
-    bottom: 21dvw;
-    left: 5.5dvw;
     color: white;
-    font-size: 3dvw;
-    line-height: 1dvw;
-    font-weight: 100;
-    transform: translateX(-140%);
-    animation: SlidingLeftToRight 3s ease 0s forwards;
 }
 
 .landing h1::first-line {
@@ -47,26 +39,37 @@ a {
 /* Short Prez */
 @keyframes SlidingRightToLeft {
     20% {
-        transform: translateX(140%);
+        transform: translateX(160%);
     }
     100% {
         transform: translateX(0%);
     }
 }
 
-#shortabout{
-    z-index: 1;
+.welcome {
+    position: absolute;
+    bottom: 21dvw;
+    left: 5.5dvw;
+    font-size: 3dvw;
+    line-height: 1dvw;
+    font-weight: 100;
+    transform: translateX(-140%);
+    animation: SlidingLeftToRight 3s ease 0s forwards;
+}
+
+.shortabout {
+    position: absolute;
     bottom: 5dvw;
-    font-size: 1dvw;
-    line-height: 1.5dvw;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
     font-weight: 300;
-    left: 60dvw;
-    width: 37dvw;
+    right: 8dvw;
+    width: 550px;
     background: black;
     box-shadow: 0 0 20px black;
-    padding: 0.5dvw;
+    padding: 0.75dvw;
     border-radius: 0.5rem;
-    transform: translateX(140%);
+    transform: translateX(160%);
     animation: SlidingRightToLeft 3s ease 1s forwards;
     text-align: justify;
 }
@@ -246,10 +249,31 @@ a {
     object-position: 100% center;
 }
 /*Fin du carrousel*/
+.nowork {
+    z-index: 10;
+    display: flex;
+    width: 100dvw;
+    height: 100dvh;
+    background: black;
+    color: white;
+    font-size: 1rem;
+    padding: 50% 25%;
+    text-align: center;
+}
 
 /*FIN DU MAIN*/
 
 /* Media querries */
+@media (max-width: 1200px) {
+    .shortabout{
+        left: 5%;
+        right: 5%;
+        width: 60%;
+        padding: 0.5rem;
+        bottom: 25dvw;
+    }
+}
+
 @media (max-width: 800px) {
     /* Grille projets */
     .grid-projects {
@@ -257,8 +281,48 @@ a {
         grid-template-rows: 50dvw 50dvw 50dvw 50dvw;
     }
 
+    .shortabout{
+        bottom: 18%;
+        width: 90%;
+    }
+
     .landing p {
         font-size: 1.5rem;
+    }
+
+    .welcome {
         bottom: 11rem;
+    }
+}
+
+@media (min-width: 425px) {
+    .nowork {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    #header {
+        display: none;
+    }
+
+    .landing {
+        display: none;
+    }
+
+    .graphic-projects {
+        display: none;
+    }
+
+    .photo-carousel {
+        display: none;
+    }
+
+    .carrousel {
+        display: none;
+    }
+
+    #footer {
+        display: none;
     }
 }
