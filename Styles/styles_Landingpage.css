@@ -128,9 +128,18 @@ a {
     transition: width 1s ease;
 }
 
-.project:hover img {
+.project video {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.project:hover img{
     width: 115%;
     transition: width 0.5s;
+}
+
+.project:hover video{
+    width: 115%;
 }
 /* Fin Section Graphique */
 
