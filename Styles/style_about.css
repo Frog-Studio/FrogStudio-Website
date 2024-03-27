@@ -10,17 +10,12 @@ h2 {
     margin: 0;
 }
 
-p {
-    text-align: start;
-}
-
 .about {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 130dvh;
     padding: 0 15dvw;
-    padding-top: 3rem;
+    padding-top: 5rem;
 }
 
 .img-container {
@@ -36,7 +31,7 @@ p {
 }
 
 .about img {
-    width: 100%;
+    width: 15rem;
     object-fit: cover;
 }
 
