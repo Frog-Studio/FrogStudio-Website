@@ -1,0 +1,21 @@
+.compact-galerie {
+    display: grid;
+}
+
+.compact-galerie img {
+    width: 100px;
+    height: 100px;
+}
+
+.compact-galerie ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.singular_compact-galerie {
+
+}
+
+.singular_compact-galerie:active {
+
+}
