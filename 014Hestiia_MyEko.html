@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/styles_General.css">
+    <link rel="stylesheet" href="Styles/style_graphicprojects.css">
+    <link rel="icon" href="Assets/Icons/Frog_Studio_Icon.ico">
+    <link rel="shortcut icon" href="Assets/Icons/Frog_Studio_Icon.ico">
+    <title>Frog Studio</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="Assets/Icons/Frog_Studio_Website_Logo.svg" draggable="false">
+            <p> Studio</p>
+        </a>
+        <button type="button" aria-label="toggle curtain navigation" class="menu-toggle">
+            <span class="line l1"></span>
+            <span class="line l2"></span>
+            <span class="line l3"></span>
+        </button>
+    </header>
+    
+    <nav class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projectsgalery.html">Design</a></li>
+            <li><a href="photos.html">Photos</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="landing">
+            <h1>Hestiia<br>MyEko</h1>
+            <div class="landingimagecontainer">
+                <img src="Assets/Projets/014Hestiia_MyEko/First Look Render copie.webp" draggable="false">
+            </div>
+        </section>
+<!--
+        <section class="description">
+            <div class="Inspirations">
+                <h2>Inspirations</h2>
+                <p></p>
+                <div class="Inspishow">
+                    <img src="" draggable="false">
+                </div>
+            </div>
+            <div class="Concept">
+                <h2></h2>
+                <p></p>
+            </div>
+            <div class="production">
+                <h2>Processus de création</h2>
+                <p>La vidéo ci-dessous vous montre les différents éléments de la vidéo sur Blender.</p>
+                <video muted preload autoplay loop>
+                    <source src="" type="video/webm">
+                    Your user agent does not support the HTML5 Video element.
+                </video>
+            </div>
+        </section>
+-->
+        <section class="rendu-final">
+            <h2>Résultat</h2>
+            <video class="theshow" width="auto" preload controls onloadstart="this.volume=0.1">
+                <source src="Assets/Projets/014Hestiia_MyEko/First Test Viewport Render.webm" type="video/mp4">
+                Votre navigateur ne supporte pas la balise video de HTML5
+            </video>
+        </section>
+<!--
+        <section class="Inspirations">
+            <h2>Mockup</h2>
+            <div class="Inspishow">
+                <img src="" draggable="false">
+            </div>
+        </section>
+-->
+        <section class="linkedproject">
+            <div class="linkedprjbackground"><img src="Assets/Projets/014Hestiia_MyEko/First Look Render copie.webp" draggable="false"></div>
+            <a class="linkedprjcontainer" href="Assets/Projets/014Hestiia_MyEko/HestiiaBis.html">
+                <h2>Intégration Web</h2>
+                <p>Recréation du site web de Hestiia afin d'intégrer la vidéo de manière dynamique à la page.
+                    <br> L'objectif est de rendre plus intéressante la page produit.
+                </p>
+                <p>--+ En savoir plus +--</p>
+            </a>
+        </section>
+
+        <section class="remerciements">
+            <h3>Merci de votre attention.</h3>
+        </section>
+    </main>
+    
+    <footer>
+        <ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="projectsgalery.html">Design</a></li>
+            <li><a href="photos.html">Photos</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </footer>
+    
+    <script src="Scripts/script_menuburger.js"></script>
+</body>
+</html>
