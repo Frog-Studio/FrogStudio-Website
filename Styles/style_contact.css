@@ -12,7 +12,7 @@ a {
 h1 {
     font-size: 6.4rem;
     line-height: 7rem;
-    margin-top: 20dvh;
+    margin-top: 8dvh;
     margin-bottom: 0;
     margin-left: 2rem;
     color: var(--main-accent-color);
@@ -37,9 +37,11 @@ h1 {
 .socialnetwork {
     width: 50dvw;
     height: 40dvh;
-    flex: 1;
+    flex: 2;
     display: flex;
     flex-direction: column;
+    transform: translateX(-100%);
+    animation: 0.5s ArriveIn 1.5s cubic-bezier(.42,.08,.48,.95) forwards;
 }
 
 .socialnetwork h2 {
@@ -84,7 +86,7 @@ h1 {
     flex: 1;
     padding-left: 3dvw;
     transform: translateX(-100%);
-    animation: ArriveIn 2s cubic-bezier(.42,.08,.48,.95) forwards;
+    animation: ArriveIn 1.5s cubic-bezier(.42,.08,.48,.95) forwards;
     padding-left: 2rem;
 }
 
@@ -96,15 +98,12 @@ h1 {
 
 .sideimage img {
     position: absolute;
-    height: 100%;
     width: 100%;
     object-fit: cover;
     top: 0;
-    right: 0;
-    overflow: hidden;
 }
 
-@media (max-width: 1000px) {
+@media (max-aspect-ratio: 4/3) {
     .socialnetwork {
         width: 100dvw;
     }
