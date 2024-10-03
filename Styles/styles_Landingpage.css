@@ -191,13 +191,14 @@ a {
 
 .car-photo-container img {
     object-fit: contain;
-    border-radius: 3rem;
+    border-radius: 2rem;
     height: 100%;
-    box-shadow: 0 0 20px var(--main-accent-color);
+    box-shadow: 0 0 30px var(--main-accent-color);
 }
 
 :root {
-    --animation-speed: 30s;
+    --animation-speed: 50s;
+    --carroussel-photos-animation-move: 43.5dvh
 }
 
 #CD-G {
@@ -212,12 +213,12 @@ a {
 /* the animation */
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-43.4dvh * 7))}
+	100% { transform: translateX(calc(calc(var(--carroussel-photos-animation-move)*-1) * 7))}
 }
 
 @keyframes backscroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(43.4dvh * 7))}
+	100% { transform: translateX(calc(var(--carroussel-photos-animation-move) * 7))}
 }
 /* fin de l'animaiton */
 /* fin du carousel photo */

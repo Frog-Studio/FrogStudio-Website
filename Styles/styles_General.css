@@ -15,6 +15,11 @@ a {
     text-decoration: none;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --main-accent-color: #5EB030;
     --main-accent-color-alpha: rgba(94, 176, 48, 0.4);
@@ -62,7 +67,7 @@ header {
     height: 100px;
     width: 100vw;
     z-index: 20;
-    background: linear-gradient(rgba(0, 0, 0, 0.75), transparent);
+    background: linear-gradient(rgba(0, 0, 0, 1), transparent);
     animation: 2.5s cubic-bezier(.55,.13,.18,.93) HideHeader;
 }
 /*
@@ -170,15 +175,13 @@ header.scrolled {
 .mobile-menu {
     position: fixed;
     z-index: 100;
-    width: 15vw;
+    width: fit-content;
     height: 100vh;
     top: 0;
     right: 0;
-    display: flex;
-    justify-content: center;
     align-content: center;
+    padding: 3rem;
     background: black;
-    flex-direction: column;
     border-left: 1px solid var(--main-accent-color);
     transform: translateX(100%);
     transition: transform 0.5s cubic-bezier(.25,0,.36,1);
@@ -319,6 +322,47 @@ main {
 	justify-content: center;
 	align-items: center;
 }
+
+/* Check Down */
+.check-down {
+    padding: 10rem;
+    z-index: 1000;
+    position: absolute;
+    top: 75%;
+    animation-name: check-downing;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    font-size: 2.5rem !important;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+@keyframes check-downing {
+    50%{
+        transform: translateY(0px);
+    }
+    60%{
+        transform: translateY(2rem);
+    }
+    70%{
+        transform: translateY(1rem);
+    }
+    80%{
+        transform: translateY(2rem);
+    }
+    90%{
+        transform: translateY(0.5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+/* Fin Check Down */
+
 /* Fin Landing */
 
 
@@ -344,12 +388,12 @@ footer {
 
 footer ul {
     list-style: none;
-    padding: 0;
+    padding: 1rem;
 }
 
 footer li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 2rem;
 }
 
 footer a {
