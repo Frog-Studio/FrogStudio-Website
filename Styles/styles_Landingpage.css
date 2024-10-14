@@ -1,30 +1,5 @@
 /* MAIN */
 
-h2 {
-    font-size: 5rem;
-    font-weight: 800;
-    margin: 0;
-    width: 100%;
-    z-index: 3;
-    padding-left: 2dvw;
-}
-
-h2 span {
-    color: var(--main-accent-color);
-}
-
-h3 {
-    font-size: 1.5rem;
-    margin: 0;
-    padding: 0;
-    color: var(--main-accent-color);
-}
-
-a {
-    color: white;
-    text-decoration: none;
-}
-
 /* Sections */
 /* Landing */
 .landing p {
@@ -47,31 +22,32 @@ a {
 }
 
 .welcome {
-    position: absolute;
-    bottom: 21dvw;
-    left: 5.5dvw;
+    z-index: 1;
     font-size: 3dvw;
     line-height: 1dvw;
     font-weight: 100;
     transform: translateX(-140%);
     animation: SlidingLeftToRight 3s ease 0s forwards;
+    margin: 7dvw;
+}
+
+.welcome h1 {
+    position: initial;
 }
 
 .shortabout {
-    position: absolute;
-    bottom: 5dvw;
     font-size: 1.5rem;
     line-height: 1.75rem;
     font-weight: 300;
-    right: 8dvw;
     width: 550px;
     background: black;
     box-shadow: 0 0 20px black;
-    padding: 0.75dvw;
+    padding: 1rem;
     border-radius: 0.5rem;
     transform: translateX(160%);
     animation: SlidingRightToLeft 3s ease 1s forwards;
     text-align: justify;
+    margin: 7dvw;
 }
 
 .graphic-projects {
@@ -80,15 +56,15 @@ a {
 
 .grid-projects {
     display: grid;
-    grid-template-columns: 25dvw 25dvw 25dvw 25dvw;
-    grid-template-rows: 25dvw 25dvw;
+    grid-template-columns: 20dvw 20dvw 20dvw 20dvw;
+    grid-template-rows: 20dvw;
+    gap: 3.5dvw;
     justify-content: center;
     align-items: center;
 }
 
 .project{
     display: flex;
-    height: 80%;
     aspect-ratio: 1/1;
     overflow: hidden;
     position: relative;
@@ -250,17 +226,6 @@ a {
     object-position: 100% center;
 }
 /*Fin du carrousel*/
-.nowork {
-    z-index: 10;
-    display: flex;
-    width: 100dvw;
-    height: 100dvh;
-    background: black;
-    color: white;
-    font-size: 1rem;
-    padding: 50% 25%;
-    text-align: center;
-}
 
 /*FIN DU MAIN*/
 
@@ -270,21 +235,29 @@ a {
         left: 5%;
         right: 5%;
         width: 60%;
-        padding: 0.5rem;
         bottom: 25dvw;
+    }
+
+    .grid-projects {
+        grid-template-columns: 40dvw 40dvw;
+        grid-template-rows: 40dvw;
+        gap: 5dvw;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     /* Grille projets */
     .grid-projects {
-        grid-template-columns: 50vw 50dvw;
-        grid-template-rows: 50dvw 50dvw 50dvw 50dvw;
+        margin: 6rem;
+        grid-template-columns: 75dvw;
+        grid-template-rows: 75dvw;
+        gap: 15dvw;
     }
 
     .shortabout{
         bottom: 13rem;
         width: 90%;
+        text-align: left;
     }
 
     .landing p {
@@ -296,34 +269,18 @@ a {
     }
 }
 
-@media (min-width: 425px) {
-    .nowork {
-        display: none;
-    }
-}
-
 @media (max-width: 425px) {
-    #header {
-        display: none;
+    .welcome {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        backdrop-filter: blur(5.9px);
+        padding: 1rem;
+        text-shadow: 0 0 20px black;
     }
-
-    .landing {
-        display: none;
-    }
-
-    .graphic-projects {
-        display: none;
-    }
-
-    .photo-carousel {
-        display: none;
-    }
-
-    .carrousel {
-        display: none;
-    }
-
-    #footer {
-        display: none;
+    
+    .shortabout {
+        margin-bottom: 5rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

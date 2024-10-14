@@ -215,3 +215,15 @@
 }
 /* fin des photos */
 /* fin de full width image section */
+
+@media (max-width: 768px) {
+    .all-images {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 425px) {
+    .all-images {
+        grid-template-columns: auto;
+    }
+}

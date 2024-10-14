@@ -1,6 +1,12 @@
 /* Styles généraux */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+    --main-accent-color: #5EB030;
+    --main-accent-color-alpha: rgba(94, 176, 48, 0.4);
+    --menu-toggle-size: 50px
+}
+
 body {
     font-family: Poppins, sans-serif;
     margin: 0;
@@ -8,6 +14,25 @@ body {
     overflow-x: hidden;
     background-color: black;
     color: white;
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 1rem;
+    z-index: 3;
+    padding-left: 2dvw;
+}
+
+h2 span {
+    color: var(--main-accent-color);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    color: var(--main-accent-color);
 }
 
 a {
@@ -18,11 +43,6 @@ a {
 ul {
     margin: 0;
     padding: 0;
-}
-
-:root {
-    --main-accent-color: #5EB030;
-    --main-accent-color-alpha: rgba(94, 176, 48, 0.4);
 }
 
 /* Scroll bar */
@@ -50,9 +70,6 @@ ul {
     0% {
         transform: translateY(-100%);
     }
-    80% {
-        transform: translateY(-100%);
-    }
     100% {
         transform: translateY(0%);
     }    
@@ -68,43 +85,24 @@ header {
     width: 100vw;
     z-index: 20;
     background: linear-gradient(rgba(0, 0, 0, 1), transparent);
-    animation: 2.5s cubic-bezier(.55,.13,.18,.93) HideHeader;
+    transform: translateY(-100%);
+    animation: 1s cubic-bezier(.55,.13,.18,.93) 2s HideHeader forwards;
+    transition: 0.75s ease;
 }
-/*
-@keyframes scrolled {
-    from {
-      height: 100px;
-      opacity: 1;
-    }
-    to {
-      height: 50px;
-      opacity: 0.5;
-    }
-}
-
-header.scrolled {
-    background: black;
-    border-bottom: 1px solid var(--main-accent-color);
-    transition: scrolled 1s ease;
-}
-*/
+    
 .logo {
     display: flex;
     align-items: center;
     font-size: 3rem;
     font-weight: bold;
-    width: 50%;
     text-decoration: none;
     color: white;
+    line-height: 2.5rem;
 }
 
 .logo img {
     height: 90%;
     margin-right: 1rem;
-}
-
-.logo p {
-    margin: 0;
 }
 
 .logo p::before{
@@ -117,18 +115,15 @@ header.scrolled {
 /* Boutton du menu burger */
 .menu-toggle {
     position: relative;
-    display: flex;
-    z-index: 998;
+    z-index: 20;
     top: 50%;
     right: 55px;
-    height: 50px;
-    width: 50px;
+    height: var(--menu-toggle-size);
+    width: var(--menu-toggle-size);
+    padding: 0;
     border: none;
     outline: none;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: transparent;
     transform: translate(50%, -50%);
 }
@@ -144,11 +139,11 @@ header.scrolled {
 }
 
 .l1 {
-    transform: translateY(-15px);
+    transform: translateY(calc(var(--menu-toggle-size)/3));
 }
 
 .l3 {
-    transform: translateY(15px);
+    transform: translateY(calc((var(--menu-toggle-size)/3)*-1));
 }
 
 .menu-toggle.active .l1 {
@@ -174,7 +169,7 @@ header.scrolled {
 /* Nav du menu burger */
 .mobile-menu {
     position: fixed;
-    z-index: 100;
+    z-index: 10;
     width: fit-content;
     height: 100vh;
     top: 0;
@@ -191,19 +186,28 @@ header.scrolled {
     transform: translateX(0);
 }
 
+.mobile-menu li {
+    list-style: none;
+    padding-bottom: 2px; /*the space for the gradient*/
+    background: linear-gradient(var(--main-accent-color), var(--main-accent-color)) center bottom; /*OR bottom right OR bottom left*/
+    background-size: 0% 2px; /*width:0% height:2px*/
+    background-repeat: no-repeat; /* Don't repeat !!*/
+    transition: all 0.45s;
+    margin: 5dvh 0;
+}
+
+.mobile-menu li:hover {
+    background-size: 100% 2px; /*width:100% height:2px*/
+}
+
 .mobile-menu a{
     font-weight: lighter;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 400;
     display: block;
-    margin: 5rem 0;
     text-decoration: none;
     text-align: center;
-}
-
-.mobile-menu li {
-    list-style: none;
 }
 /* Fin du menu burger */
 
@@ -218,32 +222,34 @@ main {
 /* Landing */
 .landing {
     height: 100dvh;
+    width: 100dvw;
     overflow: hidden;
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: end;
+    justify-content: space-between;
     border-bottom: 1px solid var(--main-accent-color);
 }
 
 @keyframes ZoomOut {
     0% {
-        width: auto;
-        height: 125dvh;
+        transform: scale(1.5);
         opacity: 0%;
     }
     100% {
-        width: auto;
-        height: 100dvh;
+        transform: scale(1);
         opacity: 100%;
     }
 }
 
-.landinginmagecontainer {
-    position: relative;
+.landingimagecontainer {
+    z-index: 0;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100dvh;
+    width: 100dvw;
 }
 
 .landing img,
@@ -266,16 +272,15 @@ main {
 }
 
 .landing h1 {
-	z-index: 1;
     position: absolute;
     bottom: 5dvw;
     left: 5dvw;
     transform: translateX(-140%);
-    font-size: 10dvw;
-    line-height: 9vw;
-    color: white;
+    font-size: 8dvw;
+    line-height: 8vw;
     margin: 0;
     animation: SlidingLeftToRight 3s cubic-bezier(.45,.36,.17,.97) 0.75s forwards;
+    z-index: 1;
 }
 
 .landing h1::first-line {
@@ -326,9 +331,9 @@ main {
 /* Check Down */
 .check-down {
     padding: 10rem;
-    z-index: 1000;
+    z-index: 2;
     position: absolute;
-    top: 75%;
+    right: calc(50dvw - 9rem - 40px);
     animation-name: check-downing;
     animation-duration: 2s;
     animation-timing-function: ease-out;
@@ -337,6 +342,7 @@ main {
     background-color: rgba(0, 0, 0, 0);
     border-color: rgba(0, 0, 0, 0);
     color: white;
+    text-shadow: black 0 0 10px;
 }
 
 @keyframes check-downing {
@@ -404,11 +410,7 @@ footer a {
 
 /* Media Queries pour la réactivité */
 /* Styles pour les écrans de largeur <= var(--media-querry-width) */
-@media (max-width: 800px) {
-    .menu-toggle {
-        display: none;
-    }
-    
+@media (max-width: 768px) {
     .landing h1 {
         font-size: 5rem;
         line-height: 4.5rem;
@@ -417,31 +419,50 @@ footer a {
 
     .logo{
         width: auto;
+        font-size: 7dvw;
+        width: 15rem;
     }
 }
 
 @media (min-aspect-ratio: 16/9) {
-    .landing {
-        height: 100dvh;
-        width: 100dvw;
-    }
-
-    @keyframes ZoomOut {
-        0% {
-            width: 175dvw;
-            height: auto;
-            opacity: 0%;
-        }
-        100% {
-            width: 100dvw;
-            height: auto;
-            opacity: 100%;
-        }
-    }
-
     .landing img,
     .landing video {
         height: auto;
         width: 100dvw;
+    }
+}
+
+@media (max-width: 425px) {
+    :root {
+        --menu-toggle-size: 35px;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .line {
+        height: 2px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .landing {
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .check-down {
+        bottom: calc(0px - 8rem);
+    }
+
+    .mobile-menu {
+        width: 100dvw;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5.9px);
     }
 }
