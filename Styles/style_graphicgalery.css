@@ -6,7 +6,9 @@ h1 {
 
 h2 {
     margin: 0;
-    font-size: 4dvw;
+    padding: 0;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
     color: var(--main-accent-color);
 }
 
@@ -27,24 +29,24 @@ img {
 }
 
 .graphicgalery {
+    width: 100dvw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
+    overflow: hidden;
 }
 
 .project {
-    display: flex;
-    height: 75dvh;
     width: 100dvw;
+    display: flex;
+    padding: 2rem 10dvw;
+    gap: 5dvw;
     border-top: 1px solid var(--main-accent-color);
     align-items: center;
-    justify-content: space-around;
     background: radial-gradient(circle at left, var(--main-accent-color-alpha) 0%, transparent 75%);
 }
 
 .description {
-    height: 80%;
     width: 40dvw;
     display: flex;
     flex-direction: column;
@@ -58,12 +60,12 @@ img {
 
 .image-container {
     display: flex;
-    height: 80%;
+    width: 40dvw;
     aspect-ratio: 1/1;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 
 .image-container:hover img {
@@ -117,3 +119,21 @@ img {
 
 /* Fin de l'animation de chargement */
 /* fin */
+
+@media (max-width: 425px) {
+    .project {
+        flex-direction: column;
+    }
+
+    .project:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .description {
+        width: 100%;
+    }
+}
