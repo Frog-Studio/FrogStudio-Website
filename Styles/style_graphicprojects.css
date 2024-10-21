@@ -2,6 +2,7 @@ h2 {
     font-weight: 700;
     font-size: 3rem;
     color: var(--main-accent-color);
+    hyphens: auto;
 }
 
 /* Description section */
@@ -30,9 +31,17 @@ h2 {
     gap: 2rem;
 }
 
+.Inspishow:last-child {
+    margin-bottom: 2rem;
+}
+
 .Inspishow img {
     object-fit: contain;
-    width: 20dvw;
+    width: 45%;
+}
+
+.Inspishow video {
+    width: 100%;
 }
 
 .Concept {
@@ -69,6 +78,12 @@ h2 {
 .rendu-final img {
     box-shadow: none !important;
     max-height: 100dvh;
+}
+
+.rendu-final iframe {
+    height: 80dvh;
+    aspect-ratio: 6/14;
+    border: 1px var(--main-accent-color);
 }
 
 .theshow {
@@ -174,5 +189,10 @@ h2 {
 
     .Inspishow img {
         width: 100%;
+    }
+
+    .rendu-final iframe {
+        width: 80dvw;
+        height: 80dvh;
     }
 }

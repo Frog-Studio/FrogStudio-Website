@@ -17,7 +17,7 @@ a {
     text-decoration: none;
 }
 
-img {
+img, video {
     height: 100%;
     transition: height 1s ease;
     object-fit: cover;
@@ -51,6 +51,10 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.description p {
+    text-align: justify;
 }
 
 .project:nth-child(even) {

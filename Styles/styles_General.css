@@ -21,7 +21,6 @@ h2 {
     font-weight: 800;
     margin: 1rem;
     z-index: 3;
-    padding-left: 2dvw;
 }
 
 h2 span {
@@ -281,11 +280,15 @@ main {
     margin: 0;
     animation: SlidingLeftToRight 3s cubic-bezier(.45,.36,.17,.97) 0.75s forwards;
     z-index: 1;
-}
-
-.landing h1::first-line {
     color: var(--main-accent-color);
     text-transform: uppercase;
+    hyphens: auto;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 50%);
+}
+
+.landing h1 span {
+    color: white;
+    text-transform: none;
 }
 
 .VideoOnLoad {
@@ -396,26 +399,33 @@ main {
 
 /* FOOTER */
 footer {
+    width: 100dvw;
     background-color: black;
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 4rem;
     border-top: 1px solid var(--main-accent-color);
+    text-align: center;
 }
 
 footer ul {
     list-style: none;
-    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 footer li {
     display: inline;
-    margin: 0 2rem;
     white-space: nowrap;
 }
 
 footer a {
     color: white;
     text-decoration: none;
+    hyphens: auto;
 }
 /*FIN DU FOOTER*/
 
@@ -432,6 +442,10 @@ footer a {
         width: auto;
         font-size: 7dvw;
         width: 15rem;
+    }
+
+    footer {
+        padding: 2rem 5rem;
     }
 }
 
@@ -479,5 +493,10 @@ footer a {
 
     .mobile-menu {
         width: 100dvw;
+    }
+
+    footer ul {
+        flex-direction: column;
+        justify-content: center;
     }
 }
