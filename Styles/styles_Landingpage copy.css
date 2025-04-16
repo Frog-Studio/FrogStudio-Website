@@ -1,0 +1,340 @@
+/* MAIN */
+
+/* Sections */
+/* Landing */
+.landing p {
+    z-index: 2;
+    color: white;
+}
+
+.landing h1::first-line {
+    color: var(--main-accent-color);
+}
+
+/* Short Prez */
+@keyframes SlidingRightToLeft {
+    20% {
+        transform: translateX(160%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.welcome {
+    z-index: 1;
+    font-size: 3dvw;
+    line-height: 1dvw;
+    font-weight: 100;
+    transform: translateX(-140%);
+    animation: SlidingLeftToRight 3s ease 0s forwards;
+    margin: 7dvw;
+}
+
+.welcome h1 {
+    position: initial;
+}
+
+.shortabout {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+    width: 550px;
+    background: black;
+    box-shadow: 0 0 20px black;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transform: translateX(160%);
+    animation: SlidingRightToLeft 3s ease 1s forwards;
+    text-align: justify;
+    margin: 7dvw;
+}
+
+/* --- Landing Carousel --- */
+
+.LandingProjectCarousel {
+    position: absolute;
+    height: 100dvh;
+    width: 100dvw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    direction: ltr;
+    scroll-snap-type: x mandatory;
+}
+
+.LandingProjectContainer {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+}
+
+.LandingProjectContainer img {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.LandingProjectTxt {
+    z-index: 2;
+    position: relative;
+    display: flex;
+}
+
+.LandingCarouselController {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: 1px var(--main-accent-color) 2rem;
+}
+
+.LandingCarouselController:last-child {
+    right: 0;
+}
+
+/* --- Fin Landing Carousel --- */
+
+.graphic-projects {
+    border-top: 1px solid var(--main-accent-color);
+}
+
+.grid-projects {
+    display: grid;
+    grid-template-columns: 20dvw 20dvw 20dvw 20dvw;
+    grid-template-rows: 20dvw;
+    gap: 3.5dvw;
+    justify-content: center;
+    align-items: center;
+}
+
+.project{
+    display: flex;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.5s ease;
+    margin: auto;
+}
+
+.project:hover {
+    box-shadow: 0 0 50px var(--main-accent-color);
+    transition: box-shadow 1s ease;
+}
+
+.project h3 {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: transform 1s ease;
+    text-align: center;
+    text-shadow: black -10 -10 50px;
+    background: radial-gradient(circle at top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-size: contain;
+    padding: 1rem 0;
+    border-top: 1px solid var(--main-accent-color);
+}
+
+.project:hover h3 {
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+
+.project img {
+    height: auto;
+    width: 100%;
+    aspect-ratio: 1/1;
+    transition: width 1s ease;
+}
+
+.project video {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.project:hover img{
+    width: 115%;
+    transition: width 0.5s;
+}
+
+.project:hover video{
+    width: 115%;
+}
+/* Fin Section Graphique */
+
+/* Début du carousel photo */
+.photo-carousel {
+    height: 100dvh;
+    width: 100dvw;
+    border-top: 1px solid var(--main-accent-color);
+    z-index: 1;
+    overflow: hidden;
+}
+
+/*
+.photo-carousel::after,
+.photo-carousel::before {
+    position: relative;
+    top: 0;
+    content: "";
+    height: 100dvh; 
+    width: 15dvw;
+    background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+    z-index: 2;
+}
+
+.photo-carousel::after {
+    right: 0;
+    transform: rotateZ(180deg);
+}
+
+.photo-carousel::before {
+    left: 0;
+}
+*/
+
+.car-photo {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    height: 42%;
+}
+
+.car-photo-container {
+    height: 40dvh;
+    width: auto;
+}
+
+.car-photo-container img {
+    object-fit: contain;
+    border-radius: 2rem;
+    height: 100%;
+    box-shadow: 0 0 30px var(--main-accent-color);
+}
+
+:root {
+    --animation-speed: 50s;
+    --carroussel-photos-animation-move: 43.5dvh
+}
+
+#CD-G {
+    animation: scroll var(--animation-speed) linear infinite;
+}
+
+#CG-D {
+    flex-direction: row-reverse;
+    animation: backscroll var(--animation-speed) linear infinite;
+}
+
+/* the animation */
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(calc(var(--carroussel-photos-animation-move)*-1) * 7))}
+}
+
+@keyframes backscroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(var(--carroussel-photos-animation-move) * 7))}
+}
+/* fin de l'animaiton */
+/* fin du carousel photo */
+
+/* Carrousel */
+.carrousel {
+    height: 100dvh;
+    width: 100dvw;
+    margin: 0;
+    overflow: hidden;   
+    position: relative;
+    border-top: 1px solid var(--main-accent-color);
+}
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-0%, -50%);
+    user-select: none;
+}
+
+#image-track > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+}
+/*Fin du carrousel*/
+
+/*FIN DU MAIN*/
+
+/* Media querries */
+@media (max-width: 1200px) {
+    .shortabout{
+        left: 5%;
+        right: 5%;
+        width: 60%;
+        bottom: 25dvw;
+    }
+
+    .grid-projects {
+        grid-template-columns: 40dvw 40dvw;
+        grid-template-rows: 40dvw;
+        gap: 5dvw;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Grille projets */
+    .grid-projects {
+        margin: 6rem;
+        grid-template-columns: 75dvw;
+        grid-template-rows: 75dvw;
+        gap: 15dvw;
+    }
+
+    .shortabout{
+        bottom: 13rem;
+        width: 90%;
+        text-align: left;
+    }
+
+    .landing p {
+        font-size: 1.5rem;
+    }
+
+    .welcome {
+        bottom: 11rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .welcome {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        backdrop-filter: blur(5.9px);
+        padding: 1rem;
+        text-shadow: 0 0 20px black;
+    }
+    
+    .shortabout {
+        margin-bottom: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
