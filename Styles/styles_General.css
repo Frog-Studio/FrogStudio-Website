@@ -220,6 +220,7 @@ main {
 
 /* Landing */
 .landing {
+    z-index: 1;
     height: 100dvh;
     width: 100dvw;
     overflow: hidden;
@@ -242,7 +243,7 @@ main {
 }
 
 .landingimagecontainer {
-    z-index: 0;
+    z-index: -1;
     position: absolute;
     display: flex;
     align-items: center;

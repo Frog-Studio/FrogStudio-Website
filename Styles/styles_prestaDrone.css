@@ -1,0 +1,223 @@
+/* CSS Général */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section  {
+    width: 80dvw;
+}
+
+.landing h1 {
+    /* Layout related */
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+    /* Style related */
+    color: #FFF;
+    text-align: center;
+    animation: none;
+    transform: none;
+
+    /* Font related */
+    font-size: 4.6rem;
+    font-weight: bold;
+    line-height: normal;
+}
+
+h2 {
+    /* Layout related */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+    /*  Style related */
+    color: #FFF;
+
+    /* Font related */
+    font-size: 3.125rem;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+h3 {
+    /* Layout related */
+    text-align: center;
+
+    /*  Style related */
+    color: #FFF;
+
+    /* Font related */
+    font-size: 2.1875rem;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.btn {
+    /* Layout related */
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+
+    /* Style related */
+    color: #000;
+    border-radius: 0.5rem;
+    background: var(--main-accent-color);
+    box-shadow: 2px 4px 8px 0 #00000025;
+
+    /* Font related */
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    /* Animation related */
+    transition: ease-in 300ms;
+}
+
+.btn:hover {
+    /* Style related */
+    box-shadow: 2px 4px 8px 0 #FFFFFF25 inset;
+
+    /* Animation related */
+    transition: ease-in 300ms;
+}
+
+/* Fin CSS Général */
+
+/* Partie Landing */
+
+.landing {
+    /* Layout related */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+.landing img {
+    animation: fadeIn 3s cubic-bezier(.45,.36,.17,.97) 0s;
+}
+
+/* Fin CSS Landing */
+
+/* Partie CSS Offres */
+
+.offres {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.offres-grid {
+    /* Layout related */
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+}
+
+.offre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Fin CSS Offres */
+
+/* Partie réassurance */
+
+.trust {
+
+}
+
+/* Fin réassurance */
+
+/* Partie showreal */
+
+.showreal {
+    /* Layout related */
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.show {
+    /* Layout related */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100dvw;
+    gap: 2rem;
+}
+
+.show-vidz {
+    /* Layout related */
+    aspect-ratio: 12/5;
+    width: 100dvw;
+}
+
+.show video {
+    /* Layout related */
+    width: 100%;
+}
+
+/* Fin partie showreal */
+
+/* Partie expérience */
+
+.experience {
+    
+}
+
+/* Fin partie expérience */
+
+/* Partie matériel */
+
+.gear { 
+    /* Layout related */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.drone {
+    /* Layout related */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+
+    /* Style related */
+    border: 1px solid var(--main-accent-color);
+    border-radius: 1.5rem;
+    box-shadow: 0 0 16px 0 #FFF;
+}
+
+/* Fin partie matériel */
