@@ -123,7 +123,7 @@
 /* Fin Section Graphique */
 
 /* Début du carousel photo */
-.photo-carousel {
+.photo-carrousel {
     height: 100dvh;
     width: 100dvw;
     border-top: 1px solid var(--main-accent-color);
@@ -132,8 +132,8 @@
 }
 
 /*
-.photo-carousel::after,
-.photo-carousel::before {
+.photo-carrousel::after,
+.photo-carrousel::before {
     position: relative;
     top: 0;
     content: "";
@@ -143,12 +143,12 @@
     z-index: 2;
 }
 
-.photo-carousel::after {
+.photo-carrousel::after {
     right: 0;
     transform: rotateZ(180deg);
 }
 
-.photo-carousel::before {
+.photo-carrousel::before {
     left: 0;
 }
 */
@@ -197,14 +197,14 @@
 	100% { transform: translateX(calc(var(--carroussel-photos-animation-move) * 7))}
 }
 /* fin de l'animaiton */
-/* fin du carousel photo */
+/* fin du carrousel photo */
 
-/* Carrousel */
-.carrousel {
+/* Carrousel Projets 3D*/
+.carrousel_projets3d {
     height: 100dvh;
     width: 100dvw;
     margin: 0;
-    overflow: hidden;   
+    overflow: hidden;
     position: relative;
     border-top: 1px solid var(--main-accent-color);
 }
@@ -219,7 +219,7 @@
     user-select: none;
 }
 
-#image-track > .image {
+#image-track > .car_projets3d_container {
     width: 40vmin;
     height: 56vmin;
     object-fit: cover;

@@ -7,7 +7,8 @@ main {
 }
 
 section  {
-    width: 80dvw;
+    width: 70dvw;
+    padding: 2rem 0;
 }
 
 .landing h1 {
@@ -25,7 +26,7 @@ section  {
     /* Font related */
     font-size: 4.6rem;
     font-weight: bold;
-    line-height: normal;
+    line-height: 1;
 }
 
 h2 {
@@ -38,7 +39,8 @@ h2 {
     color: #FFF;
 
     /* Font related */
-    font-size: 3.125rem;
+    font-size: 3rem;
+    font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
 }
@@ -54,11 +56,6 @@ h3 {
     font-size: 2.1875rem;
     line-height: normal;
     text-transform: uppercase;
-}
-
-p {
-    padding: 0;
-    margin: 0;
 }
 
 .btn {
@@ -109,14 +106,22 @@ p {
         opacity: 0%;
     }
     100%{
-        opacity: 100%;
+        opacity: 10%;
     }
 }
 
 .landing img {
-    animation: fadeIn 3s cubic-bezier(.45,.36,.17,.97) 0s;
+    animation: fadeIn 3s cubic-bezier(.45,.36,.17,.97) 0s fill forwards;
 }
 
+.goToBtn {
+    display: flex;
+    gap: 2rem;
+}
+
+.check-down {
+    bottom: calc(0px - 6rem);
+}
 /* Fin CSS Landing */
 
 /* Partie CSS Offres */
@@ -126,7 +131,6 @@ p {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    padding: 2rem 0;
 }
 
 .offres-grid {
@@ -148,7 +152,7 @@ p {
 /* Partie réassurance */
 
 .trust {
-
+    display: none;
 }
 
 /* Fin réassurance */
@@ -176,12 +180,13 @@ p {
 .show-vidz {
     /* Layout related */
     aspect-ratio: 12/5;
-    width: 100dvw;
+    width: fill;
 }
 
 .show video {
     /* Layout related */
     width: 100%;
+    height: auto;
 }
 
 /* Fin partie showreal */
@@ -202,7 +207,13 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    gap: 2rem;
+}
+
+.gear-cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
 }
 
 .drone {
@@ -215,9 +226,45 @@ p {
     width: 100%;
 
     /* Style related */
+    color: #000;
+    background-color: #FFF;
     border: 1px solid var(--main-accent-color);
     border-radius: 1.5rem;
     box-shadow: 0 0 16px 0 #FFF;
+}
+
+.drone h3 {
+    color: #000;
+}
+
+.drone table {
+    width: fill;
+    border-collapse: collapse;
+    
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 25px;
+
+    box-shadow: 0 0 8px black 0;
+}
+
+.drone th, td {
+    border: 1px #000 solid;
+    padding: 0.25rem;
+}
+
+.gear-img {
+    aspect-ratio: 16/10;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gear-img img {
+    width: 100%;
+    height: auto;
 }
 
 /* Fin partie matériel */

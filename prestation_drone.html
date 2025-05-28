@@ -53,10 +53,10 @@
             <h1>Prise de vue aérienne</h1>
             <p>Prèts  à vous donner le meilleur de vos projets</p>
             <div class="goToBtn">
-                <a class="btn">Immobilier</a>
-                <a class="btn">Évènementiel</a>
-                <a class="btn">Tourisme</a>
-                <a class="btn">Sport</a>
+                <a href="#immobilier" class="btn">Immobilier</a>
+                <a href="#event" class="btn">Évènementiel</a>
+                <a href="#tourisme" class="btn">Tourisme</a>
+                <a href="#sport" class="btn">Sport</a>
             </div>
         <button type="button" class="check-down material-icons" id="littybityscrolly">arrow_downward</button>
         <div class="landingimagecontainer"><img src="Assets/Drone/GearPreview/drone-presta-landing.JPG" draggable="false"/></div>
@@ -75,28 +75,28 @@
                     <p>La taille réduite de nos appareils nous permettent de travailler avec un publique dense sans provoquer de dérangement pour le publique.
                         <br>Notre expertise et notre maitrise de notre matériel nous permettent de proposer des prestations en toute sécurité, même avec un grand nombre de personnes.
                     </p>
-                    <a class="btn" href="#middle">Découvrir</a>
+                    <a class="btn" href="#immobilier">Découvrir</a>
                 </div>
                 <div class="offre">
                     <h3>Évènementiel & Tourisme</h3>
                     <p>La taille réduite de nos appareils nous permettent de travailler avec un publique dense sans provoquer de dérangement pour le publique.
                         <br>Notre expertise et notre maitrise de notre matériel nous permettent de proposer des prestations en toute sécurité, même avec un grand nombre de personnes.
                     </p>
-                    <a class="btn" href="#middle">Découvrir</a>
+                    <a class="btn" href="#event">Découvrir</a>
                 </div>
                 <div class="offre">
                     <h3>Évènementiel & Tourisme</h3>
                     <p>La taille réduite de nos appareils nous permettent de travailler avec un publique dense sans provoquer de dérangement pour le publique.
                         <br>Notre expertise et notre maitrise de notre matériel nous permettent de proposer des prestations en toute sécurité, même avec un grand nombre de personnes.
                     </p>
-                    <a class="btn" href="#middle">Découvrir</a>
+                    <a class="btn" href="#tourisme">Découvrir</a>
                 </div>
                 <div class="offre">
                     <h3>Évènementiel & Tourisme</h3>
                     <p>La taille réduite de nos appareils nous permettent de travailler avec un publique dense sans provoquer de dérangement pour le publique.
                         <br>Notre expertise et notre maitrise de notre matériel nous permettent de proposer des prestations en toute sécurité, même avec un grand nombre de personnes.
                     </p>
-                    <a class="btn" href="#middle">Découvrir</a>
+                    <a class="btn" href="#sport">Découvrir</a>
                 </div>
             </div>
         </section>
@@ -107,7 +107,7 @@
 
         <section class="showreal">
             <h2>Nos showreal</h2>
-            <div class="show">
+            <div class="show" id="immobilier">
                 <h3>Showreal immobilier</h3>
                 <div class="show-vidz">
                     <video preload autoplay loop>
@@ -116,7 +116,7 @@
                     </video>
                 </div>
             </div>
-            <div class="show">
+            <div class="show" id="event">
                 <h3>Showreal évènementiel</h3>
                 <div class="show-vidz">
                     <video preload="none" controls poster="Assets/Drone/Showreals/event.webp" data-poster="Assets/Drone/Showreals/event.webp" playsinline>
@@ -125,7 +125,7 @@
                     </video>
                 </div>
             </div>
-            <div class="show">
+            <div class="show" id="tourisme">
                 <h3>Showreal tourisme</h3>
                 <div class="show-vidz">
                     <video preload="none" controls poster="Assets/Drone/Showreals/cine.webp" data-poster="Assets/Drone/Showreals/cine.webm" playsinline>
@@ -134,7 +134,7 @@
                     </video>
                 </div>
             </div>
-            <div class="show">
+            <div class="show" id="sport">
                 <h3>Showreal sport</h3>
                 <div class="show-vidz">
                     <video preload="none" controls poster="Assets/Drone/Showreals/sport.webp" data-poster="Assets/Drone/Showreals/sport.webp" playsinline>
@@ -152,81 +152,87 @@
 
         <section class="gear">
             <h2>Notre matériel</h2>
-            <div class="drone">
-                <h3>DJI Avata 2</h3>
-                <img src="Assets/Drone/GearPreview/DJI-Avata2.png">
-                <table>
-                    <tr>
-                        <td>Caméra :</td>
-                        <td>Fixe</td>
-                    </tr>
-                    <tr>
-                        <td>Capteur :</td>
-                        <td>CMOS 1/1.3 In</td>
-                    </tr>
-                    <tr>
-                        <td>Performance capteur max :</td>
-                        <td>D-Log M 10bits, 4k 100ips</td>
-                    </tr>
-                    <tr>
-                        <td>Stabilisation :</td>
-                        <td>DJI Gyroflow</td>
-                    </tr>
-                    <tr>
-                        <td>Temp de vol max :</td>
-                        <td>23 min</td>
-                    </tr>
-                    <tr>
-                        <td>Distance max :</td>
-                        <td>13 km</td>
-                    </tr>
-                    <tr>
-                        <td>Vitesse max :</td>
-                        <td>100km/h</td>
-                    </tr>
-                    <tr>
-                        <td>Zone d’opération :</td>
-                        <td>Intérieur & extérieur</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="drone">
-                <h3>DJI Mavic Mini 3</h3>
-                <img src="Assets/Drone/GearPreview/DJI-Mavic-mini-3.png">
-                <table>
-                    <tr>
-                        <td>Caméra :</td>
-                        <td>Stabilisée</td>
-                    </tr>
-                    <tr>
-                        <td>Capteur :</td>
-                        <td>CMOS 1/1.3 In</td>
-                    </tr>
-                    <tr>
-                        <td>Performance capteur max :</td>
-                        <td>4k 30ips</td>
-                    </tr>
-                    <tr>
-                        <td>Stabilisation :</td>
-                        <td>3 axes</td>
-                    </tr>
-                    <tr>
-                        <td>Temp de vol max :</td>
-                        <td>32 min</td>
-                    </tr>
-                    <tr>
-                        <td>Distance max :</td>
-                        <td>10 km</td>
-                    </tr>
-                    <tr>
-                        <td>Vitesse max :</td>
-                        <td>57km/h</td>
-                    </tr>
-                    <tr>
-                        <td>Zone d’opération :</td>
-                        <td>Intérieur & extérieur</td>
-                    </tr>
-                </table>
+            <div class="gear-cards">
+                <div class="drone">
+                    <h3>DJI Avata 2</h3>
+                    <div class="gear-img">
+                        <img src="Assets/Drone/GearPreview/DJI-Avata2.png">
+                    </div>
+                    <table>
+                        <tr>
+                            <td>Caméra :</td>
+                            <td>Fixe</td>
+                        </tr>
+                        <tr>
+                            <td>Capteur :</td>
+                            <td>CMOS 1/1.3 In</td>
+                        </tr>
+                        <tr>
+                            <td>Performance capteur max :</td>
+                            <td>D-Log M 10bits, 4k 100ips</td>
+                        </tr>
+                        <tr>
+                            <td>Stabilisation :</td>
+                            <td>DJI Gyroflow</td>
+                        </tr>
+                        <tr>
+                            <td>Temp de vol max :</td>
+                            <td>23 min</td>
+                        </tr>
+                        <tr>
+                            <td>Distance max :</td>
+                            <td>13 km</td>
+                        </tr>
+                        <tr>
+                            <td>Vitesse max :</td>
+                            <td>100km/h</td>
+                        </tr>
+                        <tr>
+                            <td>Zone d’opération :</td>
+                            <td>Intérieur & extérieur</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="drone">
+                    <h3>DJI Mavic Mini 3</h3>
+                    <div class="gear-img">
+                        <img src="Assets/Drone/GearPreview/DJI-Mavic-mini-3.png">
+                    </div>
+                    <table>
+                        <tr>
+                            <td>Caméra :</td>
+                            <td>Stabilisée</td>
+                        </tr>
+                        <tr>
+                            <td>Capteur :</td>
+                            <td>CMOS 1/1.3 In</td>
+                        </tr>
+                        <tr>
+                            <td>Performance capteur max :</td>
+                            <td>4k 30ips</td>
+                        </tr>
+                        <tr>
+                            <td>Stabilisation :</td>
+                            <td>3 axes</td>
+                        </tr>
+                        <tr>
+                            <td>Temp de vol max :</td>
+                            <td>32 min</td>
+                        </tr>
+                        <tr>
+                            <td>Distance max :</td>
+                            <td>10 km</td>
+                        </tr>
+                        <tr>
+                            <td>Vitesse max :</td>
+                            <td>57km/h</td>
+                        </tr>
+                        <tr>
+                            <td>Zone d’opération :</td>
+                            <td>Intérieur & extérieur</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </section>
 
