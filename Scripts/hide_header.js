@@ -1,4 +1,4 @@
-var header_hideout = window.innerHeight - 100;
+var header_hideout = window.innerHeight - 85;
 var header_shown = Date.now();
 
 window.addEventListener("scroll", function() {
