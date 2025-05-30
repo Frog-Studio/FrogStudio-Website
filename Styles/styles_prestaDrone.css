@@ -58,7 +58,7 @@ h3 {
     text-transform: uppercase;
 }
 
-.btn {
+.btn, button {
     /* Layout related */
     display: inline-flex;
     align-items: center;
@@ -193,7 +193,11 @@ h3 {
 /* Partie expérience */
 
 .experience {
-    
+    display: flex;
+}
+
+.experience img {
+    width: 10dvw;
 }
 
 /* Fin partie expérience */
@@ -211,7 +215,7 @@ h3 {
 
 .gear-cards {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     gap: 2rem;
 }
 
@@ -219,6 +223,7 @@ h3 {
     /* Layout related */
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
     padding: 2rem;
@@ -237,7 +242,7 @@ h3 {
 }
 
 .drone table {
-    width: fill;
+    width: 100%;
     border-collapse: collapse;
     
     overflow: hidden;
@@ -267,3 +272,46 @@ h3 {
 }
 
 /* Fin partie matériel */
+
+/* Début partie Contact */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form button {
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 2.1875rem;
+}
+
+.form-group input {
+    /* Layout related */
+    width: 100%;
+    border-radius: 24px;
+    padding: 0.5rem;
+
+    /* Style related */
+    border: 1px solid var(--main-accent-color);
+
+    /* font related */
+    font-family: Poppins, sans-serif;
+}
+
+#msg {
+    resize: vertical;
+}
+
+.form-super-group {
+    display: flex;
+}
+
+/* Fin partie Contact */

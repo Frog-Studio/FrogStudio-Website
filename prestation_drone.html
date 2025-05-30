@@ -113,7 +113,7 @@
             <div class="show" id="immobilier">
                 <h3>Showreal immobilier</h3>
                 <div class="show-vidz">
-                    <video preload="none" controls poster="Assets/Drone/Showreals/immobilier.webp"playsinline>
+                    <video preload="none" controls poster="Assets/Drone/Showreals/immo.webp"playsinline>
                         <source src="Assets/Drone/Showreals/immobilier.webm" type="video/webm">
                         Your user agent does not support the HTML5 Video element.
                     </video>
@@ -150,7 +150,10 @@
 
         <section class="experience">
             <h2>Notre expérience et nos motivations</h2>
-            <p>L'imagerie aérienne est une passion chez Frog Studio depuis 6 ans. Aujourd'hui, nous sommes fiers de développer cette expertise à travers nos nouveaux services de prise de vue par drone. Cette continuité dans notre engagement envers les perspectives uniques vous assure un accompagnement professionnel et des images aériennes qui témoignent de notre expérience et de notre maîtrise.</p>
+            <div>
+                <p>L'imagerie aérienne est une passion chez Frog Studio depuis 6 ans. Aujourd'hui, nous sommes fiers de développer cette expertise à travers nos nouveaux services de prise de vue par drone. Cette continuité dans notre engagement envers les perspectives uniques vous assure un accompagnement professionnel et des images aériennes qui témoignent de notre expérience et de notre maîtrise.</p>
+                <img src="Assets/Drone/HappyReal.jpg" draggable="false">
+            </div>
         </section>
 
         <section class="gear">
@@ -240,10 +243,31 @@
         </section>
 
         <section class="contact-form">
-            
+            <h2>Besoin de nos services ?</h2>
+            <form action="#" method="POST">
+                <div class="form-super-group">
+                    <div class="form-group">
+                        <label for="login">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login">Téléphone <span>(facultatif)</span></label>
+                        <input type="tel" id="tel" name="tel" placeholder="06 00 00 00 00">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mdp">Objet</label>
+                    <input type="text" id="obj" name="obj" placeholder="Objet de votre message" required>
+                </div>
+                <div class="form-group">
+                    <label for="msg">Message</label>
+                    <input type="text" id="msg" name="msg" placeholder="Votre message" required>
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
         </section>
     </main>
-
+    
     <footer id="footer">
         <ul>
             <li><a href="index.html">Accueil</a></li>
