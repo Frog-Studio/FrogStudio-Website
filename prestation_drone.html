@@ -64,21 +64,25 @@
 
         <section class="offres">
             <h2>Nos offres de services</h2>
-            <p>Frog Studio vous propose de nouvelles perspectives avec son service FPV.
+            <p>
+                Frog Studio vous propose de nouvelles perspectives avec notre service de prise de vue FPV.
                 <br>Découvrez le monde sous un angle inédit et donnez une dimension spectaculaire avec des plans à couper le souffle.
-                <br>La prise de vue en FPV est une méthode spécifique de captation vidéo aérienne. Elle permet d’effectuer des missions dans des environnements restreints où un drone sans protections ne serait pas adapté. Ce sont aussi des plan à haute vitesse qui peuvent être réalisés.
+                <br>La prise de vue en FPV est une méthode spécifique de captation vidéo aérienne. Elle permet d’effectuer des missions à haute vitesse où un drone classique ne serait pas adapté. Sous une configuration cinéwhoop, ce sont les intérieurs qui s'ouvrent au champ des possibles.
                 <br>Cette méthode n’est cependant pas prévue pour des plans statiques, en top-down ou pour de la télé-photo, il faudrait privilégier un drone standard à caméra stabilisé pour cela.
             </p>
             <div class="offres-grid">
                 <div class="offre">
                     <h3>Immobilier</h3>
-                    <p>La taille réduite de nos appareils nous permettent de travailler avec un publique dense sans provoquer de dérangement pour le publique.
+                    <a href="#immobilier"><img src="Assets/Drone/Showreals/immo.webp" draggable="false"></a>
+                    <p>
+                        La taille réduite de nos appareils nous permettent de travailler avec un publique dense sans provoquer de dérangement pour le publique.
                         <br>Notre expertise et notre maitrise de notre matériel nous permettent de proposer des prestations en toute sécurité, même avec un grand nombre de personnes.
                     </p>
                     <a class="btn" href="#immobilier">Découvrir</a>
                 </div>
                 <div class="offre">
                     <h3>Évènementiel</h3>
+                    <a href="#event"><img src="Assets/Drone/Showreals/event.webp" draggable="false"></a>
                     <p>
                         La taille réduite de nos appareils nous permettent de travailler avec un publique dense sans provoquer de dérangement pour le publique.
                         <br>Notre expertise et notre maitrise de notre matériel nous permettent de proposer des prestations en toute sécurité, même avec un grand nombre de personnes.
@@ -87,6 +91,7 @@
                 </div>
                 <div class="offre">
                     <h3>Tourisme</h3>
+                    <a href="#tourisme"><img src="Assets/Drone/Showreals/cine.webp" draggable="false"></a>
                     <p>
                         Le format mini de nos drones nous permettent de filmer des lieux significatifs avec des angles impossibles sur d’autres plateformes.
                         <br>Nos drones sont également légers et ne pose que très peu de risques en travaillant au près des gens.
@@ -95,6 +100,7 @@
                 </div>
                 <div class="offre">
                     <h3>Sport</h3>
+                    <a href="#sport"><img src="Assets/Drone/Showreals/sport.webp" draggable="false"></a>
                     <p>
                         La grande vitesse accouplée à une agilité extrême et des protections d’hélices, nos appareils nous permettent de produire des images uniques et épiques au plus proche de l’actions.
                         <br>Nos appareils proposent certaines fonctions d’adaptation peu rependues, nous permettant d’adapter facilement le vol à toutes les situations.
@@ -150,9 +156,9 @@
 
         <section class="experience">
             <h2>Notre expérience et nos motivations</h2>
-            <div>
+            <div class="xp-para">
                 <p>L'imagerie aérienne est une passion chez Frog Studio depuis 6 ans. Aujourd'hui, nous sommes fiers de développer cette expertise à travers nos nouveaux services de prise de vue par drone. Cette continuité dans notre engagement envers les perspectives uniques vous assure un accompagnement professionnel et des images aériennes qui témoignent de notre expérience et de notre maîtrise.</p>
-                <img src="Assets/Drone/HappyReal.jpg" draggable="false">
+                <img src="">
             </div>
         </section>
 
@@ -261,7 +267,8 @@
                 </div>
                 <div class="form-group">
                     <label for="msg">Message</label>
-                    <input type="text" id="msg" name="msg" placeholder="Votre message" required>
+                    <span class="textarea" role="textbox" contenteditable></span>
+                    <textarea type="text" id="msg" name="msg" placeholder="Votre message ..." required></textarea>
                 </div>
                 <button type="submit">Envoyer</button>
             </form>
