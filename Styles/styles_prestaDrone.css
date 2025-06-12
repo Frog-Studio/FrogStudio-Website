@@ -322,7 +322,7 @@ form {
 }
 
 .form-group label {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .form-group input, textarea {
@@ -342,6 +342,7 @@ textarea {
     /* Layout related */
     resize: vertical;
     min-height: 5rem;
+    field-sizing: content;
 }
 
 .textarea {
