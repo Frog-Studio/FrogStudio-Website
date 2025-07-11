@@ -361,6 +361,7 @@ main {
     border-color: rgba(0, 0, 0, 0);
     color: white;
     text-shadow: black 0 0 10px;
+    box-shadow: none;
 }
 
 @keyframes check-downing {
