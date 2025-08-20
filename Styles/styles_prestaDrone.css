@@ -36,7 +36,7 @@ h2 {
     padding: 0;
 
     /*  Style related */
-    color: #FFF;
+    color: var(--main-accent-color);
 
     /* Font related */
     font-size: 3rem;
@@ -387,7 +387,7 @@ form {
 textarea {
     /* Layout related */
     resize: vertical;
-    min-height: 5rem;
+    min-height: 10rem;
     field-sizing: content;
 }
 
@@ -396,7 +396,6 @@ textarea {
   width: 100%;
   overflow: hidden;
   resize: both;
-  min-height: 40px;
   line-height: 20px;
 }
 
