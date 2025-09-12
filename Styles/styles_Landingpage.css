@@ -50,8 +50,61 @@
     margin: 7dvw;
 }
 
+/* Vidéo projet vidéo */
+.video-projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 0 5%;
+    padding-bottom: 2rem;
+}
+
+.video-showreal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.video-showreal img {
+    box-shadow: 0 0 0 var(--main-accent-color);
+    transition: box-shadow 0.5s ease;
+}
+
+.video-showreal:hover img {
+    box-shadow: 0 0 50px var(--main-accent-color);
+    transition: box-shadow 1s ease;
+}
+
+.video-showreal h3 {
+    color: white;
+}
+
+.video-showreal img {
+    width: 100%;
+    border-radius: 1rem;
+}
+/* Fin projet vidéo */
+
 .graphic-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
     border-top: 1px solid var(--main-accent-color);
+}
+
+.graphic-projects h2 {
+    width: 100%;
+    padding: 0 2rem;
 }
 
 .grid-projects {
@@ -61,6 +114,7 @@
     gap: 3.5dvw;
     justify-content: center;
     align-items: center;
+    padding: 0 5%;
 }
 
 .project{
@@ -71,7 +125,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 2rem;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 var(--main-accent-color);
     transition: box-shadow 0.5s ease;
     margin: auto;
 }
@@ -124,11 +178,21 @@
 
 /* Début du carousel photo */
 .photo-carrousel {
-    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
     width: 100dvw;
     border-top: 1px solid var(--main-accent-color);
     z-index: 1;
     overflow: hidden;
+    padding-bottom: 2rem;
+}
+
+.photo-carrousel h2 {
+    width: 100dvw;
+    padding: 0 2rem;
 }
 
 /*
@@ -156,50 +220,60 @@
 .car-photo {
     display: flex;
     gap: 2rem;
-    padding-bottom: 2rem;
     height: 42%;
 }
 
 .car-photo-container {
     height: 40dvh;
     width: auto;
+    border-radius: 2rem;
+    box-shadow: 0 0 0 var(--main-accent-color);
+    transition: box-shadow 0.5s ease;
+}
+
+.car-photo-container:hover {
+    box-shadow: 0 0 50px var(--main-accent-color);
+    transition: box-shadow 1s ease;
 }
 
 .car-photo-container img {
     object-fit: contain;
     border-radius: 2rem;
     height: 100%;
-    box-shadow: 0 0 30px var(--main-accent-color);
 }
 
 :root {
-    --animation-speed: 50s;
-    --carroussel-photos-animation-move: 43.5dvh
+    --animation-speed: 10s;
+    --carroussel-photos-animation-move: 43.4dvh;
+    --minus-translation: 5rem;
 }
 
 #CD-G {
     animation: scroll var(--animation-speed) linear infinite;
+    /*scale: 0.25;*/
 }
 
 #CG-D {
     flex-direction: row-reverse;
     animation: backscroll var(--animation-speed) linear infinite;
+    /*scale: 0.25;*/
 }
 
 /* the animation */
 @keyframes scroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(calc(var(--carroussel-photos-animation-move)*-1) * 7))}
+	0% { transform: translateX(25%); }
+	100% { transform: translateX(calc(calc(var(--carroussel-photos-animation-move) * -1) * 7 + 25%)); }
 }
 
 @keyframes backscroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(var(--carroussel-photos-animation-move) * 7))}
+	0% { transform: translateX(-25%); }
+	100% { transform: translateX(calc(var(--carroussel-photos-animation-move) * 7 + -25%)); }
 }
 /* fin de l'animaiton */
 /* fin du carrousel photo */
 
 /* Carrousel Projets 3D*/
+/*
 .carrousel_projets3d {
     height: 100dvh;
     width: 100dvw;
@@ -225,6 +299,7 @@
     object-fit: cover;
     object-position: 100% center;
 }
+*/
 /*Fin du carrousel*/
 
 /*FIN DU MAIN*/
