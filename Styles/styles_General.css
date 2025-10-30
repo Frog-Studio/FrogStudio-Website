@@ -96,8 +96,9 @@ header {
     width: 100vw;
     z-index: 20;
     background: linear-gradient(rgba(0, 0, 0, 1), transparent);
+    backdrop-filter: blur(25px);
     transform: translateY(-100%);
-    animation: 1s cubic-bezier(.55,.13,.18,.93) 2s HideHeader forwards;
+    animation: 1s cubic-bezier(.55,.13,.18,.93) 0s HideHeader forwards;
     transition: 0.75s ease;
 }
     
@@ -385,7 +386,9 @@ main {
     }
 }
 
-.check-down
+.check-down:hover {
+    box-shadow: none;
+}
 /* Fin Check Down */
 
 /* Fin Landing */
