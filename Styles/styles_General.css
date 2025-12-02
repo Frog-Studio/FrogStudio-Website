@@ -96,7 +96,7 @@ header {
     width: 100vw;
     z-index: 20;
     background: linear-gradient(rgba(0, 0, 0, 1), transparent);
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(0px);
     transform: translateY(-100%);
     animation: 1s cubic-bezier(.55,.13,.18,.93) 0s HideHeader forwards;
     transition: 0.75s ease;
@@ -141,6 +141,11 @@ header {
     cursor: pointer;
     background: transparent;
     transform: translate(50%, -50%);
+    box-shadow: none;
+}
+
+.menu-toggle:hover {
+    box-shadow: none;
 }
 
 .line {
@@ -255,7 +260,7 @@ main {
     }
     100% {
         transform: scale(1);
-        opacity: 80%;
+        opacity: 100%;
     }
 }
 
@@ -497,8 +502,12 @@ footer a {
 
     .logo{
         width: auto;
-        font-size: 7dvw;
         width: 15rem;
+    }
+
+    .logo p {
+        font-size: 2rem;
+        line-height: 2rem;
     }
 
     footer {
@@ -520,7 +529,12 @@ footer a {
     }
 
     .logo {
-        font-size: 2rem;
+        width: 10rem;
+    }
+
+    .logo p {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
     }
 
     .line {
