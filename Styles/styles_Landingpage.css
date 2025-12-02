@@ -245,7 +245,7 @@
 }
 
 :root {
-    --animation-speed: 40s;
+    --animation-speed: 60s;
     --carroussel-photos-animation-move: 43.4dvh;
     --minus-translation: 5rem;
 }
