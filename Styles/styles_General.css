@@ -465,7 +465,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    padding: 2rem 0;
+    padding: 2rem 5rem;
     border-top: 1px solid var(--main-accent-color);
     text-align: center;
 }
@@ -559,7 +559,9 @@ footer a {
     }
 
     .check-down {
+        padding: 6rem;
         bottom: calc(0px - 8rem);
+        right: calc(50dvw - 5rem - 40px);
     }
 
     .mobile-menu {
