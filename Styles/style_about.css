@@ -44,3 +44,23 @@ h2 {
     flex: 1;
     align-items: center;
 }
+
+@media (max-width: 425px) {
+    
+    .about {
+        align-items: normal;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .MainAdjectifs {
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    .SubAdjectif {
+        margin-bottom: 1rem;
+    }
+}

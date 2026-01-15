@@ -84,7 +84,6 @@ h1 {
 
 .mail {
     flex: 1;
-    padding-left: 3dvw;
     transform: translateX(-100%);
     animation: ArriveIn 1.5s cubic-bezier(.42,.08,.48,.95) forwards;
     padding-left: 2rem;
@@ -110,5 +109,29 @@ h1 {
 
     .sideimage {
         display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+        padding-left: 0;
+    }
+
+    .mail {
+        padding-left: 0;
+        max-height: 4rem;
+    }
+
+    .contactinfo {
+        display: flex;
+    }
+
+    .socialnetwork {
+        max-height: 15rem;
     }
 }

@@ -548,7 +548,7 @@ footer a {
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .landing {
@@ -560,7 +560,7 @@ footer a {
 
     .check-down {
         padding: 6rem;
-        bottom: calc(0px - 8rem);
+        bottom: calc(0px - 3rem) !important;
         right: calc(50dvw - 5rem - 40px);
     }
 

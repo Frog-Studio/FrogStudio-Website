@@ -150,6 +150,10 @@
     cursor: pointer;
 }
 
+.carousel-close:hover {
+    box-shadow: none;
+}
+
 /* croix du menu */
 .close {
     width: 50px;

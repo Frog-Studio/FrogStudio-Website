@@ -181,8 +181,9 @@ h3 {
 }
 
 .trusted:hover {
-    transition: 0.25s ease-out;
-    box-shadow: 0 0 24px 0 #FFFFFF90;
+    transition: 0.35s ease-out;
+    box-shadow: 0 0 18px 0 #FFFFFF90;
+    transform: scale(1.1);
 }
 
 /* Fin réassurance */
@@ -225,6 +226,7 @@ h3 {
 .experience {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
 }
 
 .xp-para {
@@ -314,10 +316,7 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.contact-form button {
-
+    gap: 2rem;
 }
 
 form {
@@ -377,4 +376,44 @@ textarea {
 
 .hidden {
     display: none;
+}
+
+
+@media (max-width: 425px) {
+    .landing h1 {
+        font-size: 3rem;
+        letter-spacing: 0;
+        text-shadow: 0 0 24px #000;
+    }
+
+    .landing p {
+        text-shadow: 0 0 6px #000;
+    }
+
+    .goToBtn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .offres-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trustCarousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-super-group {
+        grid-template-columns: 1fr;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
 }
